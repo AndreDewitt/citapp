@@ -1,0 +1,147 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(2px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-ocultar {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal form {
+    width: 70%;
+    padding: 0px 0px 100px 0px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal form .pag-ocultar {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal form .pag-1 {
+    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+
+.modal form .pag-1 .seleccion {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal form .pag-1 .seleccion h2 {
+    padding: 10px 0px;
+}
+
+.modal form .pag-1 .seleccion select {
+    width: 100%;
+    background-color: var(--fondo-tarjeta);
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    color: var(--texto);
+}
+
+.modal form .pag-1 .seleccion select:focus {
+    outline: none;
+}
+
+.modal form .pag-1 .seleccion select option {
+    padding: 10px;
+}
+
+.modal form .pag-1 .fecha-hora {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.modal form .pag-1 .fecha-hora .titulo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal form .pag-1 .fecha-hora .tabla {
+    width: 100%;
+}
+
+.modal form .pag-1 .tabla {
+    width: 100%;
+}
+
+.modal form .pag-1 .tabla table {
+    width: 100%;
+    color: var(--texto);
+    border-collapse: collapse;
+}
+
+.modal form .pag-1 .tabla table thead th {
+    padding: 20px 0px;
+}
+
+.modal form .pag-1 .tabla table tbody td {
+    padding: 10px;
+    text-align: center;
+}
+
+.modal form .pag-1 .tabla table tbody td input[type="radio"] {
+    display: none;
+}
+
+.modal form .pag-1 .tabla table tbody td div {
+    padding: 15px;
+    border-radius: var(--border-radius);
+}
+
+.modal form .pag-1 .tabla table tbody td .disponible {
+    background-color: var(--azul);
+    cursor: pointer;
+}
+
+.modal form .pag-1 .tabla table tbody td .no-disponible {
+    background-color: var(--fondo-tarjeta);
+}
+
+.modal form .pag-2 {
+    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal form .pag-2 label {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.modal form .pag-2 input {
+    width: 100%;
+    background-color: var(--fondo-tarjeta);
+    padding: 10px;
+}
+
+.modal form .opciones {
+    position: absolute;
+    top: calc(100% - 80px);
+}

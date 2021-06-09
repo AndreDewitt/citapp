@@ -1,0 +1,108 @@
+.titulo{
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.agendar, .busqueda, .servicios{
+    width: 70%;
+    margin: auto;
+}
+
+.agendar .titulo, .busqueda .titulo, .servicios .titulo{
+    text-align: left;
+}
+
+.agendar .negocios{
+    display: flex;
+    justify-content: flex-start;
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.agendar .negocios .negocio{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: var(--fondo-tarjeta);
+    border-radius: var(--border-radius);
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.agendar .negocios .negocio:not(:last-child){
+    margin-right: 15px;
+}
+
+.agendar .negocios .negocio .icono i{
+    color: var(--texto);
+    font-size: 3em;
+}
+
+.agendar .negocios .negocio .texto{
+    width: 100%;
+    color: var(--texto);
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.busqueda{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   width: 70%;
+   padding: 20px 0px;
+}
+
+.busqueda .input-busqueda {
+    position: relative;
+}
+
+.busqueda .input-busqueda i{
+    position: absolute;
+    color: var(--texto);
+    padding-right: 10px;
+    right: 0;
+    top: 10px;
+}
+
+.busqueda .input-busqueda input[type="search"]{
+    padding: 10px 35px 10px 10px;
+    background-color: var(--fondo-tarjeta);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    color: var(--texto);
+    outline: none;
+    font-size: 1em;
+}
+
+.servicios {
+    width: 70%;
+    margin: auto;
+}
+
+.servicios .servicio {
+    padding: 15px;
+    border-radius: var(--border-radius);
+    background-color: var(--fondo-tarjeta);
+    display: flex;
+    justify-content: space-between;
+}
+
+.servicios .servicio .opciones {
+    display: flex;
+    align-content: center;
+}
+
+.servicios .servicio .opciones a {
+    text-decoration: none;
+    padding: 0px 10px;
+}
+
+.servicios .servicio:not(:last-child) {
+    margin-bottom: 10px;
+}

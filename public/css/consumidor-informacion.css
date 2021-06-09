@@ -1,0 +1,57 @@
+body .informacion {
+    width: 70%;
+    margin: auto;
+}
+
+body .informacion .opciones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+body .informacion .opciones .servicio {
+    display: flex;
+    align-items: center;
+    color: var(--texto);
+}
+
+body .informacion .opciones .servicio i {
+    padding: 0px 15px 0px 0px;
+}
+
+body .informacion .negocio {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body .informacion .negocio .titulo {
+    display: flex;
+    width: 100%;
+}
+
+body .informacion .negocio .titulo i {
+    padding: 0px 15px 0px 0px;
+    color: var(--texto);
+}
+
+body .informacion .negocio .descripcion,
+body .informacion .negocio .ubicacion {
+    width: 100%;
+    display: flex;
+}
+
+body .informacion .negocio .descripcion .info,
+body .informacion .negocio .ubicacion .direccion {
+    width: 60%;
+    line-height: 1.6em;
+    padding: 0px 30px 0px 0px;
+}
+
+body .informacion .negocio .descripcion .foto,
+body .informacion .negocio .ubicacion .mapa {
+    width: 40%;
+    background-color: var(--fondo-tarjeta);
+    border-radius: var(--border-radius);
+}
