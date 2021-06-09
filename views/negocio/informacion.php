@@ -52,6 +52,32 @@
             </div>
         </div>
     </section>
+
+    <form action="" method="post">
+        <label for="descripcion">Descripción</label>
+        <input type="text" name="descripcion" id="descripcion">
+        <label for="fotografias">Fotografías</label>
+        <input type="file" name="fotografias" id="fotografias">
+        <button>Guardar</button>
+    </form>
+
+    <form action="" method="post">
+        <label for="calle">Calle</label>
+        <input type="text" name="calle" id="calle">
+        <label for="n_interior">N° interior</label>
+        <input type="number" name="n_interior" id="n_interior">
+        <label for="n_exterior">N° exterior</label>
+        <input type="number" name="n_exterior" id="n_exterior">
+        <label for="colonia">Colonia</label>
+        <input type="text" name="colonia" id="colonia">
+        <label for="cp">C.P</label>
+        <input type="number" name="cp" id="cp">
+        <label for="alcaldia">Alcaldia</label>
+        <input type="text" name="alcaldia" id="alcaldia">
+        <label for="ciudad">Ciudad</label>
+        <input type="text" name="ciudad" id="ciudad">
+        <button>Guardar</button>
+    </form>
 </div>
 </body>
 </html>
