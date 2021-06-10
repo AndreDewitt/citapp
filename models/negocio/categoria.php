@@ -34,6 +34,18 @@
             $resultado = mysqli_query($this->db, $sql);
             return $resultado;
         }
+
+        public function eliminar () {
+            $sql = "DELETE FROM t_categorias WHERE id = '$this->id'";
+            $resultado = mysqli_query($this->db,$sql);
+            return $resultado;
+        }
+        
+        public function actualizar () {
+            $sql = "UPDATE t_categorias SET nombre = '$this->nombre' WHERE id = '$this->id'";
+            $resultado = mysqli_query($this->db,$sql);
+            return $resultado;
+        }
     }
 
 ?>
