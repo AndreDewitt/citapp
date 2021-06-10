@@ -54,9 +54,7 @@ CREATE TABLE `t_categoria` (
 
 CREATE TABLE `t_citas` (
   `id` int(16) PRIMARY KEY AUTO_INCREMENT,
-  `dia` varchar(255),
-  `mes` varchar(255),
-  `anio` varchar(255),
+  `fecha` date,
   `hora` varchar(255),
   `descripcion` varchar(255),
   `id_negocio` int(16)
