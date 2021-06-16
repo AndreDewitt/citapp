@@ -17,6 +17,7 @@
 .modal-ocultar {
     visibility: hidden;
     opacity: 0;
+    display: none;
 }
 
 .modal form {

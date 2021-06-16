@@ -15,6 +15,10 @@ body .login .iniciar-sesion {
     display: flex;
     justify-content: center;
     align-items: center;
+        width: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
 }
 
 body .login .iniciar-sesion .contenedor {
@@ -58,8 +62,8 @@ body .login .iniciar-sesion .contenedor form .opciones a {
 }
 
 body .login .registrarse {
-    width: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

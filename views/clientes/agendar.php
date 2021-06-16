@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="../../public/css/generales.css">
-    <link rel="stylesheet" href="../../public/css/modal.css">
-    <link rel="stylesheet" href="../../public/css/header.css">
-    <link rel="stylesheet" href="../../public/css/consumidor-filtrar.css">
+    <link rel="stylesheet" href="public/css/generales.css">
+    <link rel="stylesheet" href="public/css/modal.css?1.1">
+    <link rel="stylesheet" href="public/css/header.css">
+    <link rel="stylesheet" href="public/css/consumidor-filtrar.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -17,39 +17,7 @@
 <body>
     <header class="titulo">
         <div class="logo">
-            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1884 596.14">
-                <defs>
-                    <style>
-                        .cls-1 {
-                            fill: var(--texto);
-                        }
-            
-                        .cls-2 {
-                            fill: var(--azul);
-                        }
-                    </style>
-                </defs>
-                <path class="cls-1"
-                    d="M250.42,349.51q27.71,7.19,44.49,19.51t16.76,26.69a20.86,20.86,0,0,1-5.13,13.69,15.9,15.9,0,0,1-12.67,6.16,21.19,21.19,0,0,1-11.29-2.74,55.46,55.46,0,0,1-9.92-8.21q-8.91-8.89-17.12-13c-6.83-3.19-15.86-5.82-27-7.88a199.26,199.26,0,0,0-35.93-3.07q-37.64,0-68.79,19.16a135.89,135.89,0,0,0-48.93,52q-17.8,32.87-17.79,72.55,0,41.07,17.1,73.92T121.74,650q30.45,18.84,69.47,18.83,24.64,0,39.36-4.11a148.84,148.84,0,0,0,29.09-11.64q4.77-2.71,16.42-12.31a65.33,65.33,0,0,1,9.58-7.19,17.33,17.33,0,0,1,8.9-2.4q8.2,0,13,5.14c3.18,3.42,4.79,7.87,4.79,13.34q0,11.65-16.43,25t-45.17,22.93q-28.75,9.59-63.65,9.58-50,0-89-23.61T37.56,618.15Q16,576.41,16,524.38q0-50,21.9-91.37A170,170,0,0,1,99.5,367q39.69-24.63,91-24.63A238.23,238.23,0,0,1,250.42,349.51Z"
-                    transform="translate(-16 -241.03)" />
-                <path class="cls-1"
-                    d="M389,292q-7.54-6.5-7.53-18.82v-6.84c0-8.22,2.62-14.48,7.87-18.83s12.43-6.5,21.56-6.5q27.36,0,27.37,25.33v6.84q0,12.32-7.18,18.82t-20.88,6.5Q396.53,298.52,389,292Zm35.93,402.44a20.54,20.54,0,0,1-35.25-14.71V364.91a20.54,20.54,0,1,1,41.07,0V679.75A20,20,0,0,1,424.94,694.46Z"
-                    transform="translate(-16 -241.03)" />
-                <path class="cls-1"
-                    d="M606,390.24V619.52q0,26,9.58,35.24T640.87,664a39.71,39.71,0,0,0,10.26-1.7,38.67,38.67,0,0,1,9.59-1.72,13.62,13.62,0,0,1,10.6,5.14,17.75,17.75,0,0,1,4.45,12q0,9.6-10.95,16.09t-26,6.5A142,142,0,0,1,606,696.86q-14.37-3.42-27.72-20.54t-13.35-54.75V390.24h-50a19.69,19.69,0,0,1-14-5.48,19,19,0,0,1,0-27.38,19.77,19.77,0,0,1,14-5.47h50v-76a20.54,20.54,0,1,1,41.07,0v76H674.4q7.53,0,13.35,6.16t5.82,13.68a17.46,17.46,0,0,1-5.48,13.35,19.25,19.25,0,0,1-13.69,5.14Z"
-                    transform="translate(-16 -241.03)" />
-                <path class="cls-2"
-                    d="M1430,370.73q37,22.93,57.84,63.65t20.87,91.37q0,51.33-20.87,92.06t-57.49,64q-36.63,23.28-81.79,23.27-39.71,0-72.9-18.82a147.62,147.62,0,0,1-53-50.31V816.63a20.54,20.54,0,1,1-41.07,0V370.39a21.08,21.08,0,0,1,5.82-15.06,20.66,20.66,0,0,1,29.43,0,21.17,21.17,0,0,1,5.82,15.06v46.54q17.78-32.16,51.32-50.65t73.93-18.48Q1393,347.8,1430,370.73ZM1408.43,648.6q28.39-18.12,44.49-50.3T1469,525.75q0-39.69-16.08-71.52t-44.49-50q-28.41-18.13-64-18.14-36.29,0-65,17.79t-44.49,49.63q-15.75,31.82-15.74,72.2t15.74,72.55q15.73,32.18,44.49,50.3t65,18.14Q1380,666.74,1408.43,648.6Z"
-                    transform="translate(-16 -241.03)" />
-                <path class="cls-2"
-                    d="M1821.29,370.73q37,22.93,57.84,63.65T1900,525.75q0,51.33-20.87,92.06t-57.49,64q-36.63,23.28-81.79,23.27-39.7,0-72.89-18.82a147.68,147.68,0,0,1-53-50.31V816.63a20.53,20.53,0,1,1-41.06,0V370.39a21.11,21.11,0,0,1,5.81-15.06,20.67,20.67,0,0,1,29.44,0,21.16,21.16,0,0,1,5.81,15.06v46.54q17.79-32.16,51.33-50.65t73.92-18.48Q1784.34,347.8,1821.29,370.73ZM1799.74,648.6q28.38-18.12,44.49-50.3t16.08-72.55q0-39.69-16.08-71.52t-44.49-50q-28.42-18.13-64-18.14-36.29,0-65,17.79t-44.49,49.63q-15.77,31.82-15.75,72.2t15.75,72.55q15.72,32.18,44.49,50.3t65,18.14Q1771.32,666.74,1799.74,648.6Z"
-                    transform="translate(-16 -241.03)" />
-                <path class="cls-2"
-                    d="M1077.52,345.8A19.16,19.16,0,0,0,1058.36,365v46.56a179.57,179.57,0,1,0,0,221.62v54.77a19.16,19.16,0,1,0,38.32,0V365A19.16,19.16,0,0,0,1077.52,345.8ZM917.11,663.57a141.25,141.25,0,1,1,141.25-141.24A141.24,141.24,0,0,1,917.11,663.57Z"
-                    transform="translate(-16 -241.03)" />
-                <rect class="cls-2" x="886" y="174.67" width="30" height="126.3" rx="15" />
-                <rect class="cls-2" x="886" y="270.25" width="82.2" height="30.72" rx="15.36" />
-            </svg>
+            <?php require_once 'public/img/Citapp - Logo.php' ?>
         </div>
     </header>
     <section class="agendar">
@@ -57,38 +25,21 @@
             <h1>Agenda una cita</h1>
         </div>
         <div class="negocios">
-            <div class="negocio">
-                <div class="icono">
-                    <i class="material-icons">
-                        restaurant
-                    </i>
+            <?php 
+                $iconos = ['restaurant','content_cut','computer','health_and_safety'];
+                $titulo = ['Restaurante','Peluquería','Cibercafe','Consultorios'];
+                $i = 0;
+                while ($i < count($iconos)): 
+            ?>
+                <div class="negocio">
+                    <div class="icono">
+                        <i class="material-icons">
+                            <?php echo $iconos[$i]; ?>
+                        </i>
+                    </div>
+                    <div class="texto"><?php echo $titulo[$i]; ?></div>
                 </div>
-                <div class="texto">Restaurante</div>
-            </div>
-            <div class="negocio">
-                <div class="icono">
-                    <i class="material-icons">
-                        content_cut
-                    </i>
-                </div>
-                <div class="texto">Peluquería</div>
-            </div>
-            <div class="negocio">
-                <div class="icono">
-                    <i class="material-icons">
-                        computer
-                    </i>
-                </div>
-                <div class="texto">Cybercafe</div>
-            </div>
-            <div class="negocio">
-                <div class="icono">
-                    <i class="material-icons">
-                        health_and_safety
-                    </i>
-                </div>
-                <div class="texto">Consultorio</div>
-            </div>
+            <?php $i++; endwhile; ?>
         </div>
     </section>
     <section class="busqueda">
@@ -100,29 +51,18 @@
         </div>
     </section>
     <section class="servicios">
+        <?php while($negocio = $negocios->fetch_object()): ?>
         <div class="servicio">
-            <h3>nombre del servicio</h3>
+            <h3><?=$negocio->nombre?></h3>
             <div class="opciones">
-                <a href="http://" class="material-icons">store</a>
-                <a href="http://" class="material-icons">event</a>
+                <a href="http://Localhost/citapp/?controllers=agendarController&action=negocio&id=<?=$negocio->id?>" class="material-icons">store</a>
+                <a id="btn_agendar" class="material-icons">event</a>
             </div>
         </div>
-        <div class="servicio">
-            <h3>nombre del servicio</h3>
-            <div class="opciones">
-                <a href="http://" class="material-icons">store</a>
-                <a href="http://" class="material-icons">event</a>
-            </div>
-        </div>
-        <div class="servicio">
-            <h3>nombre del servicio</h3>
-            <div class="opciones">
-                <a href="http://" class="material-icons">store</a>
-                <a href="http://" class="material-icons">event</a>
-            </div>
-        </div>
+        <?php endwhile; ?>
     </section>
-    <div class="modal modal-ocultar">
+    <div id="modal" class="modal modal-ocultar">
+        <button id="cerrar" class="material-icons">close</button>
         <div class="contenedor-modal">
             <div class="titulo">
                 <h1>Nombre del negocio</h1>
@@ -258,5 +198,6 @@
             </form>
         </div>
     </div>
+    <script src="public/js/form-agendar.js"></script>
 </body>
 </html>
