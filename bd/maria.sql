@@ -23,6 +23,8 @@ CREATE TABLE `t_duenios` (
 CREATE TABLE `t_negocio` (
   `id` int(16) PRIMARY KEY AUTO_INCREMENT,
   `nombre` varchar(255),
+  `descripcion` varchar(700),
+  `fotografia` longblob,
   `id_duenio` int(16),
   `id_categoria` int(16)
 );

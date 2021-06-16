@@ -66,5 +66,20 @@
                 echo "Error";
             }
         }
+
+        public function actualizarDF(){
+            $this->model->setId(1);
+            $this->model->setDescripcion($_POST['descripcion']);
+            $this->model->setFotografia($_POST['fotografia']);
+
+            $resultado=$this->model->actualizarDF();
+
+            if($rsultado){
+                header("Location: http://localhost:8081/Citapp/?controllers=informacionNegocioController&action=mostrar");
+            }else {
+                echo "Error";
+            }
+
+        }
     }
 ?>

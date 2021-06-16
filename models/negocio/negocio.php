@@ -7,6 +7,9 @@
         public $nombre;
         public $idDuenio;
         public $idCategoria;
+        public $descripcion;
+        public $fotografia;
+        
 
         public function __construct() {
             parent::__construct();
@@ -28,6 +31,14 @@
             $this->id_categoria = $id_categoria;
         }
 
+        public function setDescripcion($descripcion):void{
+            $this->descripcion=$descripcion;
+        }
+
+        public function setFotografia($fotografia): void{
+            $this->fotografia=$fotografia;
+        }
+
         public function getId () {
             return $this->id;
         }
@@ -44,14 +55,32 @@
             return $this->id_categoria;
         }
 
+        public function getDescripcion(){
+            return $this->descripcion;
+        }
+
+        public function getFotografia(){
+            return $this->fotografia;
+        }
+
         public function insertar () {
-            $sql = "INSERT INTO t_negocio(nombre,id_duenio,id_categoria) VALUES (
+            $sql = "INSERT INTO t_negocio(nombre,id_duenio,descripcion,fotografia,id_categoria) VALUES (
                 '$this->nombre',
                 '$this->id_duenio',
+                '$this->descripcion',
+                '$this->fotografia',
                 '$this->id_categoria'
             )";
             $resultado = mysqli_query($this->db,$sql);
             return $resultado; 
+        }
+
+        public function actualizarDF(){
+          $sql="UPDATE t_negocio set descripcion='$this->descripcion', fotografia='$this->fotografia' 
+          WHERE id='$this->id'";
+          $resultado=mysqli_query($this->db,$sql);
+          return $resultado;
+
         }
 
         public function getLastId () {
