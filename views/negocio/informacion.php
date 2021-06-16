@@ -53,11 +53,11 @@
         </div>
     </section>
 
-    <form action="" method="post">
+    <form action="http://localhost/citapp/?controllers=negocioController&action=actualizarDF" method="post">
         <label for="descripcion">Descripción</label>
         <input type="text" name="descripcion" id="descripcion">
-        <label for="fotografias">Fotografías</label>
-        <input type="file" name="fotografias" id="fotografias">
+        <label for="fotografia">Fotografías</label>
+        <input type="file" name="fotografia" id="fotografia">
         <button>Guardar</button>
     </form>
 

@@ -74,8 +74,8 @@
 
             $resultado=$this->model->actualizarDF();
 
-            if($rsultado){
-                header("Location: http://localhost:8081/Citapp/?controllers=informacionNegocioController&action=mostrar");
+            if($resultado){
+                header("Location: http://localhost:8081/Citapp/?controllers=negocioController&action=mostrar");
             }else {
                 echo "Error";
             }
