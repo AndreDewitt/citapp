@@ -10,6 +10,9 @@
 
         public function mostrar () {
             $tablas = $this->model->mostrar('t_horario');
+            $servicios = $this->model->mostrar('t_servicio');
+            $horario = $tablas->fetch_object();
+            $servicio = $servicios->fetch_object();
             require_once 'views/negocio/horario.php';
         }
 
