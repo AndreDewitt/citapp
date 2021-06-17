@@ -14,7 +14,7 @@
                     <h1>Información del negocio</h1>
                 </div>
                 <div class="nombre-negocio">
-                    <h2>Nombre del negocio</h2>
+                    <h2><?=$negocio->nombre;?></h2>
                 </div>
                 <div class="nombre-dueño">
                     <h2>Nombre del negocio</h2>
@@ -22,7 +22,7 @@
                 <div class="descripcion">
                     <h2>Descripción</h2>
                     <div class="info">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, aperiam eos! In autem quos consequatur quia, nihil harum dicta commodi. Illum suscipit, sint optio cum alias quos ullam? Omnis, voluptate.</p>
+                        <p><?=$negocio->descripcion?></p>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <h2>Fotografías</h2>
             </div>
             <div class="fotos">
-                <img src="" alt="">
+                <img src="data:image/jpg;base64,<?php echo base64_encode($negocio->fotografia)?>" alt="">
                 <img src="" alt="">
                 <img src="" alt="">
                 <img src="" alt="">
@@ -45,7 +45,22 @@
                 <h2>ubicación</h2>    
             </div>
             <div class="info">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, voluptas? Error in qui commodi exercitationem, nisi aliquam magnam odio est. Possimus animi consequatur doloribus nobis, tempora alias corrupti vel architecto.</p>
+                <p>
+                Calle:
+                    <?=$ubicaciones->calle?>, 
+                Numero interior:
+                    <?=$ubicaciones->num_int?>, 
+                Numero exterior:
+                    <?=$ubicaciones->num_ext?>, 
+                Colonia:
+                    <?=$ubicaciones->colonia?>, 
+                Código postal:
+                    <?=$ubicaciones->cp?>, 
+                Alcaldía:
+                    <?=$ubicaciones->alcaldia?>, 
+                Ciudad:
+                    <?=$ubicaciones->ciudad?>
+                </p>
             </div>
             <div class="mapa">
                 <iframe src="" frameborder="0"></iframe>
@@ -53,15 +68,15 @@
         </div>
     </section>
 
-    <form action="http://localhost/citapp/?controllers=negocioController&action=actualizarDF" method="post">
+    <form action="http://localhost/citapp/?controllers=negocioController&action=actualizarDF" enctype="multipart/form-data"  method="post">
         <label for="descripcion">Descripción</label>
         <input type="text" name="descripcion" id="descripcion">
-        <label for="fotografia">Fotografías</label>
-        <input type="file" name="fotografia" id="fotografia">
+        <label for="fotografias">Fotografías</label>
+        <input type="file" name="fotografias" id="fotografias">
         <button>Guardar</button>
     </form>
 
-    <form action="" method="post">
+    <form action="http://localhost/citapp/?controllers=negocioController&action=crearU" method="post">
         <label for="calle">Calle</label>
         <input type="text" name="calle" id="calle">
         <label for="n_interior">N° interior</label>

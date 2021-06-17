@@ -15,10 +15,6 @@ body .login .iniciar-sesion {
     display: flex;
     justify-content: center;
     align-items: center;
-        width: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
 }
 
 body .login .iniciar-sesion .contenedor {
@@ -35,6 +31,9 @@ body .login .iniciar-sesion .contenedor form {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    visibility:visible;
+    overflow: auto;
+
 }
 
 body .login .iniciar-sesion .contenedor form label,
@@ -66,4 +65,13 @@ body .login .registrarse {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+}
+
+body .login .ocultar{
+    display: none;
+    width: 0%;
+    opacity: 0;
+    visibility:hidden;
+    overflow: hidden;
 }

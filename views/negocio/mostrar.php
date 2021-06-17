@@ -11,7 +11,7 @@
     <label for="edad">Edad</label>
     <input type="text" name="edad" id="edad">
 
-    <button>Cliqueame</button>
+    <button>Enviar</button>
     
  </form>
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="public/css/generales.css">
-    <link rel="stylesheet" href="public/css/login.css?1.1">
+    <link rel="stylesheet" href="public/css/login.css?1.2">
 </head>
 <body>
     <section class="login">
@@ -16,19 +16,19 @@
         <div class="iniciar-sesion">
             <div class="contenedor">
                 <h1>Iniciar Sesión</h1>
-                <form action="">
-                    <label for="">Nombre de usuario:</label>
-                    <input type="text" name="" id="">
-                    <label for="">Contraseña</label>
-                    <input type="password" name="" id="">
+                <form action="http://localhost/citapp/?controllers=usuarioController&action=inicio" method="POST">
+                    <label for="nombre">Nombre de usuario:</label>
+                    <input type="text" name="nombre" id="nombre">
+                    <label for="contrasenia">Contraseña</label>
+                    <input type="password" name="contrasenia" id="contrasenia">
                     <div class="opciones">
                         <button>Entrar</button>
-                        <a href="">Registrarse</a>
+                        <a class="btn_registro">Registrarse</a>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="registrarse">
+        <div class="registrarse ocultar">
             <div class="contenedor">
                 <h1>Registrarse</h1>
                 <form id="" action="http://localhost/citapp/?controllers=duenioController&action=crear" method="POST">
@@ -63,11 +63,12 @@
                         <label for="password">Contraseña: </label>
                         <input type="password" name="password" id="password">
                     </div>
-                    <a href="">Cancelar</a>
+                    <a class="btn_registro">Cancelar</a>
                     <button>Continuar</button>
                 </form>
             </div>
         </div>
     </section>
+    <script src="public/js/form-sesion.js"></script>
 </body>
 </html>

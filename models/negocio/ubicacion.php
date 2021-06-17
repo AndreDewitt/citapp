@@ -10,6 +10,9 @@
         public $cp;
         public $alcaldia;
         public $ciudad;
+        public $id_negocio;
+
+
         public function __construct() { parent::__construct(); }
 
         public function setId($id):void{ $this->id = $id; }
@@ -27,6 +30,8 @@
         public function setAlcaldia($alcaldia):void{ $this->alcaldia = $alcaldia; }
         
         public function setCiudad($ciudad):void{ $this->ciudad = $ciudad; }
+
+        public function setIdN($id_negocio):void{ $this->id_negocio = $id_negocio; }
         
         public function getId(){ return $this->id; }
 
@@ -44,9 +49,11 @@
         
         public function getCiudad(){ return $this->ciudad; }
 
+        public function getIdN(){ return $this->id_negocio; }
+
         public function ingresar(){
-            $sql = "INSERT INTO t_ubicacion(calle, num_int, num_ext, colonia, cp, alcaldia, ciudad)
-                    VALUES('$this->calle','$this->n_interior','$this->n_exterior','$this->colonia','$this->cp','$this->alcaldia','$this->ciudad')";
+            $sql = "INSERT INTO t_ubicacion(calle, num_int, num_ext, colonia, cp, alcaldia, ciudad, id_negocio)
+                    VALUES('$this->calle','$this->n_interior','$this->n_exterior','$this->colonia','$this->cp','$this->alcaldia','$this->ciudad', '$this->id_negocio')";
             $resultado = mysqli_query($this->db, $sql);
             return $resultado;
         }
@@ -59,7 +66,7 @@
 
         public function actualizar(){
             $sql = "UPDATE t_ubicacion 
-                    SET calle = '$this->calle', num_int = '$this->n_interior',num_ext = '$this->n_exterior', colonia = '$this->colonia', cp = '$this->cp', alcaldia = '$this->alcaldia', ciudad = '$this->ciudad'
+                    SET calle = '$this->calle', num_int = '$this->n_interior',num_ext = '$this->n_exterior', colonia = '$this->colonia', cp = '$this->cp', alcaldia = '$this->alcaldia', ciudad = '$this->ciudad', id_negocio = '$this->id_negocio'
                     WHERE id = '$this->id'";
             $resultado = mysqli_query($this->db, $sql);
             return $resultado;

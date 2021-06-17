@@ -9,7 +9,8 @@
         }
 
         public function mostrar () {
-            $tablas = $this->model->mostrar();
+            $tablas = $this->model->mostrar('t_horario');
+            require_once 'views/negocio/horario.php';
         }
 
         public function eliminar () {

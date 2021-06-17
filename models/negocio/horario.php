@@ -13,27 +13,27 @@
             parent::__construct();
         }
 
-        public function set ($id) : void {
+        public function setId($id) : void {
             $this->id = $id;
         }
         
-        public function set ($dia) : void {
+        public function setDia($dia) : void {
             $this->dia = $dia;
         }
         
-        public function set ($mes) : void {
+        public function setMes($mes) : void {
             $this->mes = $mes;
         }
         
-        public function set ($anio) : void {
+        public function setAnio($anio) : void {
             $this->anio = $anio;
         }
         
-        public function set ($hora) : void {
+        public function setHora($hora) : void {
             $this->hora = $hora;
         }
         
-        public function set ($id_servicio) : void {
+        public function setIdServicio($id_servicio) : void {
             $this->id_servicio = $id_servicio;
         }
 
@@ -59,6 +59,10 @@
 
         public function getIdServicio () {
             return $this->id_servicio;
+        }
+
+        public function FunctionName(){
+            # code...
         }
     }
 

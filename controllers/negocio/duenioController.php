@@ -15,7 +15,7 @@ require_once 'models/negocio/usuario.php';
         $this->model = new Duenio();
         $this->negocio = new Negocio();
         $this->contacto = new contactoModel();
-        $this->usuario = new usuarioModels();
+        $this->usuario = new Usuario();
     }
 
     public function login () {
@@ -24,7 +24,7 @@ require_once 'models/negocio/usuario.php';
 
     function mostrar(){
         $usuario = $this->model->mostrar('t_duenios');
-        require_once 'views/negocio/login.html';
+        require_once 'views/negocio/login.php';
     }
 
    function crear() {
