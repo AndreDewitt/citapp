@@ -14,8 +14,6 @@
         public function mostrar () {
             $tablas = $this->model->mostrar('t_horario');
             $servicios = $this->model->mostrar('t_servicio');
-            $horario = $tablas->fetch_object();
-            $servicio = $servicios->fetch_object();
             require_once 'views/negocio/horario.php';
         }
 
@@ -25,7 +23,7 @@
             if (!empty($dias)) {
                 $this->servicio->setNombre($_POST['nombre']);
                 $this->servicio->setDescripcion($_POST['descripcion']);
-                $this->servicio->setIdNegocio(2);
+                $this->servicio->setIdNegocio(1);
                 $this->servicio->insertar();
                 $this->servicio->getLastId();
                 $res = $this->servicio->getId();
@@ -47,7 +45,7 @@
                         }   
                     }
                 } 
-                header("Location: http://localhost/citapp/?controllers=horarioController&action=mostrar");
+               header("Location: http://localhost/citapp/?controllers=horarioController&action=mostrar");
             } else {
                 echo "Error diass";
             }

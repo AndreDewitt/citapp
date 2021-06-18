@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+<?php while($horario=$tablas->fetch_object()):?>
+    <p><?=$horario->dia?></p>
+    <p><?=$horario->d?></p>
+    <p><?=$horario->a?></p>
+    <p><?=$horario->disponibilidad?></p>
+    <button data-id="<?=$horario->id?>" data-dia="<?=$horario->d?>" data-d="<?=$horario->d?>" data-a="<?=$horario->a?>" data-dispon="<?=$horario->disponibilidad?>">
+    Actualizar
+    </button>
+    <button>Eliminar</button>
+    <?php endwhile;?>
 
     <div class="contenedor">        
         <form action="http://localhost/citapp/?controllers=horarioController&action=insertar" method="POST">
@@ -63,3 +73,4 @@
     <script src="public/js/form-horario.js"></script>
 </body>
 </html>
+
