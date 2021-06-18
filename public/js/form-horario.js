@@ -9,16 +9,16 @@ const hora_dias = document.getElementsByClassName("hora_dias");
 const todos = document.getElementById("todos");
 let contador = 0;
 
-const render = (dia) => {
+const render = (dia, id) => {
     const div_hora = document.createElement('div');
     const div_opciones = document.createElement('div');
     const h3 =  document.createElement('h3');
     const label_de = document.createElement('label');
-    const select_de = document.createElement('select');
+    const select_de = document.createElement('input');
     const label_a = document.createElement('label');
-    const select_a = document.createElement('select');
+    const select_a = document.createElement('input');
     const label_di = document.createElement('label');
-    const select_di = document.createElement('select');
+    const select_di = document.createElement('input');
 
     div_hora.classList.add('hora_dia');
     div_hora.classList.add('dia_'+dia);
@@ -28,9 +28,15 @@ const render = (dia) => {
     label_de.innerHTML = 'De: ';
     label_a.innerHTML = ' A: ';
     label_di.innerHTML = ' Disponibilidad: ';
-    select_de.innerHTML = '<option>00:00</option>';
-    select_a.innerHTML = '<option>00:00</option>';
-    select_di.innerHTML = '<option>0</option>';
+    select_de.setAttribute("id","d_" + id);
+    select_de.setAttribute("name","d_" + id);
+    select_de.setAttribute("type","time");
+    select_a.setAttribute("id","a_" + id);
+    select_a.setAttribute("name","a_" + id);
+    select_a.setAttribute("type","time");
+    select_di.setAttribute("id","di_" + id);
+    select_di.setAttribute("name","di_" + id);
+    select_di.setAttribute("type","number");
 
     div_opciones.appendChild(label_de);
     div_opciones.appendChild(select_de);
@@ -56,9 +62,10 @@ const remove_all = () => {
 
 todos.addEventListener('click', () => {
     if (todos.checked == true) {
+        const iniciales = ['L','Ma','Mi','J','V','S','D']
         const array = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo']
         for (let index = 0; index < array.length; index++) {
-            render(array[index])
+            render(array[index], iniciales[index])
         }
         dia_lunes.checked = true;
         dia_martes.checked = true;
@@ -82,56 +89,56 @@ todos.addEventListener('click', () => {
 
 dia_lunes.addEventListener('click', () => {
     if (dia_lunes.checked == true) {
-        render('Lunes');
+        render('Lunes', 'L');
     } else {
-        remove('Lunes');
+        remove('Lunes', 'L');
     }
 });
 
 dia_martes.addEventListener('click', () => {
     if (dia_martes.checked == true) {
-        render('Martes');
+        render('Martes', 'Ma');
     } else {
-        remove('Martes');
+        remove('Martes', 'Ma');
     }
 });
 
 dia_miercoles.addEventListener('click', () => {
     if (dia_miercoles.checked == true) {
-        render('Miércoles');
+        render('Miércoles','Mi');
     } else {
-        remove('Miércoles');
+        remove('Miércoles','Mi');
     }
 });
 
 dia_jueves.addEventListener('click', () => {
     if (dia_jueves.checked == true) {
-        render('Jueves');
+        render('Jueves', 'J');
     } else {
-        remove('Jueves');
+        remove('Jueves', 'J');
     }
 });
 
 dia_viernes.addEventListener('click', () => {
     if (dia_viernes.checked == true) {
-        render('Viernes');
+        render('Viernes', 'V');
     } else {
-        remove('Viernes');
+        remove('Viernes', 'V');
     }
 });
 
 dia_sabado.addEventListener('click', () => {
     if (dia_sabado.checked == true) {
-        render('Sábado');
+        render('Sábado', 'S');
     } else {
-        remove('Sábado');
+        remove('Sábado', 'S');
     }
 });
 
 dia_domingo.addEventListener('click', () => {
     if (dia_domingo.checked == true) {
-        render('Domingo');
+        render('Domingo', 'D');
     } else {
-        remove('Domingo');
+        remove('Domingo', 'D');
     }
 });

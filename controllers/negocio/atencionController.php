@@ -18,7 +18,7 @@
             return $resultado;
         }
 
-        public function eliminar() {
+        public function eliminarH() {
             $this->model->setId($_GET['id']);
             $this->model->setHoraApertura($_GET['hora_apertura']);
             $this->model->setHoraCierre($_GET['hora_cierre']);

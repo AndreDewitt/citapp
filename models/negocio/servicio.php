@@ -6,8 +6,7 @@
         public $id;
         public $nombre;
         public $descripcion;
-        public $capacidad;
-        public $idnegocio;
+        public $id_negocio;
 
         public function __construct () { parent::__construct(); }
 
@@ -17,9 +16,7 @@
 
         public function setDescripcion ($descripcion) { $this->descripcion = $descripcion;}
 
-        public function setCapacidad ($capacidad) { $this->capacidad = $capacidad; }
-
-        public function setIdNegocio ($idnegocio) { $this->idnegocio = $idnegocio; }
+        public function setIdNegocio ($id_negocio) { $this->id_negocio = $id_negocio; }
 
         public function getId () { return $this->id; }
 
@@ -27,15 +24,13 @@
 
         public function getDescripcion () { return $this->descripcion; }
 
-        public function getCapacidad () { return $this->capacidad; }
 
-        public function getIdNegocio () { return $this->idnegocio; }
+        public function getIdNegocio () { return $this->id_negocio; }
     
         public function insertar () {
-            $sql = "INSERT INTO t_servicio(nombre,descripcion,capacidad,id_negocio) VALUES (
+            $sql = "INSERT INTO t_servicio(nombre,descripcion,id_negocio) VALUES (
                 '$this->nombre',
                 '$this->descripcion',
-                '$this->capacidad',
                 '$this->id_negocio'
             )";
             $resultado = mysqli_query($this->db,$sql);
@@ -46,6 +41,13 @@
             $sql = "DELETE FROM t_servicio WHERE id = '$this->id'";
             $resultado = mysqli_query($this->db,$sql);
             return $resultado;
+        }
+
+        public function getLastId () {
+            $sql = "SELECT id FROM t_servicio ORDER BY id DESC LIMIT 1";
+            $query = mysqli_query($this->db,$sql);
+            $resultado = mysqli_fetch_row($query);
+            $this->id = $resultado[0];
         }
     }
 

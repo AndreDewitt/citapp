@@ -9,7 +9,7 @@
 <body>
 
     <div class="contenedor">        
-        <form action="http://localhost/citapp/?controllers=servicioController&action=insertar" method="POST">
+        <form action="http://localhost/citapp/?controllers=horarioController&action=insertar" method="POST">
             <div class="titulo">
                 <h1>Horario de atención</h1>
             </div>
@@ -19,8 +19,10 @@
                     <h2>Selecciona el servicio</h2>
                 </div>
                 <div class="nombre">
-                    <label for="">Nombre del servicio</label>
-                    <input type="text" name="" id="">
+                    <label for="nombre">Nombre del servicio</label>
+                    <input type="text" name="nombre" id="nombre">
+                    <label for="descripcion">Descripción</label>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
                 </div>
             </section>
         
@@ -31,19 +33,19 @@
                 <label for="todos">Todos los dìas disponibles</label>
                 <input type="checkbox" name="todos" id="todos">
                 <label for="lunes">Lunes</label>
-                <input type="checkbox" name="dia[]" id="lunes">
+                <input type="checkbox" name="dia[]" id="lunes" value="Lunes">
                 <label for="martes">Martes</label>
-                <input type="checkbox" name="dia[]" id="martes">
+                <input type="checkbox" name="dia[]" id="martes" value="Martes">
                 <label for="miercoles">Miercoles</label>
-                <input type="checkbox" name="dia[]" id="miercoles">
+                <input type="checkbox" name="dia[]" id="miercoles" value="Miercoles">
                 <label for="jueves">Jueves</label>
-                <input type="checkbox" name="dia[]" id="jueves">
+                <input type="checkbox" name="dia[]" id="jueves" value="Jueves">
                 <label for="viernes">Viernes</label>
-                <input type="checkbox" name="dia[]" id="viernes">
+                <input type="checkbox" name="dia[]" id="viernes" value="Viernes">
                 <label for="sabado">Sabado</label>
-                <input type="checkbox" name="dia[]" id="sabado">
+                <input type="checkbox" name="dia[]" id="sabado" value="Sabado">
                 <label for="domingo">Domingo</label>
-                <input type="checkbox" name="dia[]" id="domingo">
+                <input type="checkbox" name="dia[]" id="domingo" value="Domingo">
             </section>
             
             <section class="horas_disponibles">

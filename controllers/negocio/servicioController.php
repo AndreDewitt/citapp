@@ -14,13 +14,11 @@
         }
 
         public function insertar() {
-            var_dump($_POST['dia']);
-            // $this->model->setNombre($_POST['txt_nombre']);
-            // $this->model->setDescripcion($_POST['txt_descripcion']);
-            // $this->model->setCapacidad($_POST['txt_capacidad']);
-            // $this->model->setIdNegocio($_POST['txt_id_negocio']);
-            // $resultado = $this->model->insertar();
-            // return $resultado;
+            $this->model->setNombre($_POST['nombre']);
+            $this->model->setDescripcion($_POST['descripcion']);
+            $this->model->setIdNegocio(2);
+            $resultado = $this->model->insertar();
+            return $resultado;
         }
 
         public function eliminar () {

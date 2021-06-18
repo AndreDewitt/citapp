@@ -72,9 +72,9 @@ CREATE TABLE `t_atencion` (
 CREATE TABLE `t_horario` (
   `id` int(16) PRIMARY KEY AUTO_INCREMENT,
   `dia` varchar(255),
-  `mes` varchar(255),
-  `anio` varchar(255),
-  `hora` varchar(255),
+  `d` time,
+  `a` time,
+  `disponibilidad` int,
   `id_servicio` int(16)
 );
 
@@ -82,7 +82,6 @@ CREATE TABLE `t_servicio` (
   `id` int(16) PRIMARY KEY AUTO_INCREMENT,
   `nombre` varchar(255),
   `descripcion` varchar(255),
-  `capacidad` varchar(255),
   `id_negocio` int(16)
 );
 
