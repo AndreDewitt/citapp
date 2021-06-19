@@ -23,7 +23,7 @@
             if (!empty($dias)) {
                 $this->servicio->setNombre($_POST['nombre']);
                 $this->servicio->setDescripcion($_POST['descripcion']);
-                $this->servicio->setIdNegocio(1);
+                $this->servicio->setIdNegocio(2);
                 $this->servicio->insertar();
                 $this->servicio->getLastId();
                 $res = $this->servicio->getId();

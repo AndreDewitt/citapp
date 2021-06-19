@@ -11,8 +11,8 @@
             return $query;
         }
 
-        public function buscarPorId($tabla,$id) {
-            $query = $this->db->query("SELECT * FROM $tabla WHERE id = '$id' ORDER BY id ASC");
+        public function buscarPor($tabla,$col,$dato) {
+            $query = $this->db->query("SELECT * FROM $tabla WHERE $col = '$dato' ORDER BY id ASC");
             return $query;
         }
     }

@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <?php?>
     <header class="titulo">
         <div class="logo">
             <?php require_once 'public/img/Citapp - Logo.php'; ?>
@@ -41,10 +40,10 @@
             </div>
             <div class="descripcion">
                 <div class="info">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eos sapiente est optio sit. Dolorum laboriosam eum, quo, consequuntur maiores nihil ut consequatur consectetur ipsum omnis error tempore voluptatem explicabo!</p>
+                    <p><?=$informacion->descripcion?></p>
                 </div>
                 <div class="foto">
-
+                    <img style="max-width: 100%;" src="data:image/jpg;base64,<?php echo base64_encode($informacion->fotografia)?>" alt="" srcset="">
                 </div>
             </div>
             <div class="titulo">
@@ -53,7 +52,7 @@
             </div>
             <div class="ubicacion">
                 <div class="direccion">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aut vel quisquam, repellendus quos quis! Repellat autem laboriosam, repellendus necessitatibus suscipit corporis vero incidunt esse laborum. Quia optio deserunt neque?</p>
+                    <p>Calle <?=$ubicacion->calle?>, Num. Interior <?=$ubicacion->num_int?>, Num. Exterior <?=$ubicacion->num_ext?>, Colonia <?=$ubicacion->colonia?>, Código Postal <?=$ubicacion->cp?>, Alcaldía <?=$ubicacion->alcaldia?>, Ciudad <?=$ubicacion->ciudad?>.</p>
                 </div>
                 <div class="mapa">
                     <iframe src="" frameborder="0"></iframe>

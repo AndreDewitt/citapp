@@ -26,19 +26,19 @@
         </div>
         <div class="negocios">
             <?php 
-                $iconos = ['restaurant','content_cut','computer','health_and_safety'];
-                $titulo = ['Restaurante','Peluquería','Cibercafe','Consultorios'];
+                $iconos = ['restaurant','content_cut','health_and_safety'];
+                $titulo = ['Restaurante','Peluquería','Consultorios'];
                 $i = 0;
-                while ($i < count($iconos)): 
+                while ($categoria = $categorias->fetch_object()) : 
             ?>
-                <div class="negocio">
-                    <div class="icono">
-                        <i class="material-icons">
-                            <?php echo $iconos[$i]; ?>
-                        </i>
+                    <div id="categoria_<?=$categoria->id?>" class="negocio categoria" data-id="<?=$categoria->id?>">
+                        <div class="icono">
+                            <i class="material-icons">
+                                <?php echo $iconos[$i]; ?>
+                            </i>
+                        </div>
+                        <div class="texto"><?=$categoria->nombre?></div>
                     </div>
-                    <div class="texto"><?php echo $titulo[$i]; ?></div>
-                </div>
             <?php $i++; endwhile; ?>
         </div>
     </section>
@@ -56,25 +56,23 @@
             <h3><?=$negocio->nombre?></h3>
             <div class="opciones">
                 <a href="http://Localhost/citapp/?controllers=agendarController&action=negocio&id=<?=$negocio->id?>" class="material-icons">store</a>
-                <a id="btn_agendar" class="material-icons">event</a>
+                <a id="btn_agendar" class="btn_agendar material-icons" data-id="<?=$negocio->id?>" data-nombre="<?=$negocio->nombre?>">event</a>
             </div>
         </div>
         <?php endwhile; ?>
     </section>
     <div id="modal" class="modal modal-ocultar">
-        <button id="cerrar" class="material-icons">close</button>
+        <button class="btn_cerrar material-icons">close</button>
         <div class="contenedor-modal">
             <div class="titulo">
-                <h1>Nombre del negocio</h1>
+                <h1 id="h1_nombre_negocio"></h1>
             </div>
             <form id="agendar-cita">
                 <div class="pag-1">
                     <div class="seleccion">
                         <h2>Selecciona un servicio</h2>
-                        <select name="" id="">
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
+                        <select name="select_servicios" id="select_servicios">
+                            <option value="0">Selecciona un servicio</option>
                         </select>
                     </div>
                     <div class="fecha-hora">
@@ -82,103 +80,13 @@
                             <h2>Selecciona la hora y fecha deseada</h2>
                             <h1>Año</h1>
                         </div>
-                        <div class="tabla">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>HORA</th>
-                                        <th>
-                                            <div class="dia">
-                                                <p>dia</p>
-                                                <h2>1</h2>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="dia">
-                                                <p>dia</p>
-                                                <h2>1</h2>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="dia">
-                                                <p>dia</p>
-                                                <h2>1</h2>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="dia">
-                                                <p>dia</p>
-                                                <h2>1</h2>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="dia">
-                                                <p>dia</p>
-                                                <h2>1</h2>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="dia">
-                                                <p>dia</p>
-                                                <h2>1</h2>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            <div class="dia">
-                                                <p>dia</p>
-                                                <h2>1</h2>
-                                            </div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>00:00</td>
-                                        <td>
-                                            <div class="disponible">
-                                                <label for="disp_1">1</label>
-                                                <input type="radio" name="disp_1" id="disp_1">
-                                            </div>
-                                        </td> 
-                                        <td>
-                                            <div class="disponible">
-                                                <label for="disp_1">1</label>
-                                                <input type="radio" name="disp_1" id="disp_1">
-                                            </div>
-                                        </td> 
-                                        <td>
-                                            <div class="no-disponible">
-                                                <label for="disp_1">1</label>
-                                                <input type="radio" name="disp_1" id="disp_1">
-                                            </div>
-                                        </td> 
-                                        <td>
-                                            <div class="no-disponible">
-                                                <label for="disp_1">1</label>
-                                                <input type="radio" name="disp_1" id="disp_1">
-                                            </div>
-                                        </td> 
-                                        <td>
-                                            <div class="no-disponible">
-                                                <label for="disp_1">1</label>
-                                                <input type="radio" name="disp_1" id="disp_1">
-                                            </div>
-                                        </td> 
-                                        <td>
-                                            <div class="disponible">
-                                                <label for="disp_1">1</label>
-                                                <input type="radio" name="disp_1" id="disp_1">
-                                            </div>
-                                        </td> 
-                                        <td>
-                                            <div class="disponible">
-                                                <label for="disp_1">1</label>
-                                                <input type="radio" name="disp_1" id="disp_1">
-                                            </div>
-                                        </td> 
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="horario">
+                            <div class="dia_hora">
+                                <h3>Lunes</h3>
+                                <div class="hora">
+                                    <p></p> - <p></p>
+                                </div>  
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,6 +106,7 @@
             </form>
         </div>
     </div>
-    <script src="public/js/form-agendar.js"></script>
+    <script src="public/js/fetch-api.js?1.1"></script>
+    <script src="public/js/form-agendar.js?1.1"></script>
 </body>
 </html>

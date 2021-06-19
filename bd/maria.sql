@@ -56,10 +56,12 @@ CREATE TABLE `t_categoria` (
 
 CREATE TABLE `t_citas` (
   `id` int(16) PRIMARY KEY AUTO_INCREMENT,
-  `fecha` date,
-  `hora` varchar(255),
-  `descripcion` varchar(255),
-  `id_negocio` int(16)
+  `nombre` varchar(255),
+  `correo` varchar(255),
+  `tel` varchar(255),
+  `id_negocio` int(16),
+  `id_servicio` int(16),
+  `id_horario` int(16)
 );
 
 CREATE TABLE `t_atencion` (
@@ -71,6 +73,7 @@ CREATE TABLE `t_atencion` (
 
 CREATE TABLE `t_horario` (
   `id` int(16) PRIMARY KEY AUTO_INCREMENT,
+  `fecha` date,
   `dia` varchar(255),
   `d` time,
   `a` time,

@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Horario</title>
 </head>
 <body>
-<?php while($horario=$tablas->fetch_object()):?>
-    <p><?=$horario->dia?></p>
-    <p><?=$horario->d?></p>
-    <p><?=$horario->a?></p>
-    <p><?=$horario->disponibilidad?></p>
-    <button data-id="<?=$horario->id?>" data-dia="<?=$horario->d?>" data-d="<?=$horario->d?>" data-a="<?=$horario->a?>" data-dispon="<?=$horario->disponibilidad?>">
-    Actualizar
-    </button>
-    <button>Eliminar</button>
+    <?php while($horario=$tablas->fetch_object()):?>
+        <p><?=$horario->dia?></p>
+        <p><?=$horario->d?></p>
+        <p><?=$horario->a?></p>
+        <p><?=$horario->disponibilidad?></p>
+        <button data-id="<?=$horario->id?>" data-dia="<?=$horario->d?>" data-d="<?=$horario->d?>" data-a="<?=$horario->a?>" data-dispon="<?=$horario->disponibilidad?>">
+            Actualizar
+        </button>
+        <button>Eliminar</button>
     <?php endwhile;?>
-
     <div class="contenedor">        
         <form action="http://localhost/citapp/?controllers=horarioController&action=insertar" method="POST">
             <div class="titulo">
                 <h1>Horario de atención</h1>
             </div>
-            
             <section class="servicios">
                 <div class="titulo">
-                    <h2>Selecciona el servicio</h2>
+                    <h2>Nuevo servicio</h2>
                 </div>
                 <div class="nombre">
                     <label for="nombre">Nombre del servicio</label>
@@ -35,7 +33,6 @@
                     <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
                 </div>
             </section>
-        
             <section class="dias_atencion">
                 <div class="titulo">
                     <h2>Selecciona los días de atención</h2>
@@ -56,8 +53,7 @@
                 <input type="checkbox" name="dia[]" id="sabado" value="Sabado">
                 <label for="domingo">Domingo</label>
                 <input type="checkbox" name="dia[]" id="domingo" value="Domingo">
-            </section>
-            
+            </section> 
             <section class="horas_disponibles">
                 <div class="titulo">
                     <h2>Horas disponibles</h2>
