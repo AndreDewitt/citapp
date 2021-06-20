@@ -1,19 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require_once 'public/libs/libs.php' ?> 
     <title>Información del negocio</title>
-    <link rel="stylesheet" href="public/css/generales.css">
-    <link rel="stylesheet" href="public/css/modal.css">
-    <link rel="stylesheet" href="public/css/header.css">
-    <link rel="stylesheet" href="public/css/consumidor-filtrar.css">
-    <link rel="stylesheet" href="public/css/consumidor-informacion.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header class="titulo">
@@ -27,28 +16,28 @@
                 <a href="http://localhost/citapp/?controllers=agendarController&action=mostrar">
                     <i class="material-icons">arrow_back</i>
                 </a>
-                <h2><?=$categoria->nombre?></h2>
+                <h5><?=$categoria->nombre?></h5>
             </div>
             <div class="btn">
-                <button>Agendar</button>
+                <label class="btn_agendar material-icons">event</label>
             </div>
         </div>
         <div class="negocio">
             <div class="titulo">
                 <i class="material-icons">restaurant</i>
-                <h1><?=$informacion->nombre?></h1>
+                <h5><?=$informacion->nombre?></h5>
             </div>
             <div class="descripcion">
                 <div class="info">
                     <p><?=$informacion->descripcion?></p>
                 </div>
                 <div class="foto">
-                    <img style="max-width: 100%;" src="<?=$informacion->fotografia?>" alt="" srcset="">
+                    <img style="max-width: 100%;" src="data:image/jpg;base64,<?php echo base64_encode($informacion->fotografia)?>" alt="" srcset="">
                 </div>
             </div>
             <div class="titulo">
                 <i class="material-icons">location_on</i>
-                <h1>Ubicación</h1>
+                <h5>Ubicación</h5>
             </div>
             <div class="ubicacion">
                 <div class="direccion">
@@ -60,5 +49,8 @@
             </div>
         </div>
     </section>
+    <?php require_once 'views/clientes/modulos/form-agendar.php' ?>
+    <script src="public/js/fetch-api.js?1.3"></script>
+    <script src="public/js/form-agendar.js?1.1"></script>
 </body>
 </html>

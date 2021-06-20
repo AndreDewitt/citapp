@@ -1,11 +1,9 @@
 <section class="menu">
     <nav>
+        <h5>Menú</h5>
         <ul>
-            <li><a href="http://localhost/Citapp/?controllers=negocioController&action=mostrar">Información</a></li>
-            <li><a href="http://localhost/Citapp/?controllers=horarioController&action=mostrar">Horario de atención</a></li>
-            <li></li>
-            <li>Iconos</li>
-            <li>Iconos</li>
+            <li><a class="material-icons" href="http://localhost/Citapp/?controllers=negocioController&action=mostrar">store</a></li>
+            <li><a class="material-icons" href="http://localhost/Citapp/?controllers=horarioController&action=mostrar">schedule</a></li>
         </ul>
     </nav>
 </section>

@@ -12,7 +12,7 @@ let contador = 0;
 const render = (dia, id) => {
     const div_hora = document.createElement('div');
     const div_opciones = document.createElement('div');
-    const h3 =  document.createElement('h3');
+    const h5 =  document.createElement('h5');
     const label_de = document.createElement('label');
     const select_de = document.createElement('input');
     const label_a = document.createElement('label');
@@ -23,20 +23,27 @@ const render = (dia, id) => {
     div_hora.classList.add('hora_dia');
     div_hora.classList.add('dia_'+dia);
     div_opciones.classList.add('opciones');
+    div_opciones.classList.add('align-beetween');
 
-    h3.innerHTML = dia;
+    h5.innerHTML = dia;
     label_de.innerHTML = 'De: ';
     label_a.innerHTML = ' A: ';
     label_di.innerHTML = ' Disponibilidad: ';
     select_de.setAttribute("id","d_" + id);
     select_de.setAttribute("name","d_" + id);
     select_de.setAttribute("type","time");
+    select_de.classList.add("form-control");
+    select_de.classList.add("con-w3");
     select_a.setAttribute("id","a_" + id);
     select_a.setAttribute("name","a_" + id);
     select_a.setAttribute("type","time");
+    select_a.classList.add("form-control");
+    select_a.classList.add("con-w3");
     select_di.setAttribute("id","di_" + id);
     select_di.setAttribute("name","di_" + id);
     select_di.setAttribute("type","number");
+    select_di.classList.add("form-control");
+    select_di.classList.add("con-w3");
 
     div_opciones.appendChild(label_de);
     div_opciones.appendChild(select_de);
@@ -44,7 +51,7 @@ const render = (dia, id) => {
     div_opciones.appendChild(select_a);
     div_opciones.appendChild(label_di);
     div_opciones.appendChild(select_di);
-    div_hora.appendChild(h3);
+    div_hora.appendChild(h5);
     div_hora.appendChild(div_opciones);
     hora_dias[0].appendChild(div_hora);
 }

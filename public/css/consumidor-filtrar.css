@@ -93,14 +93,20 @@
     justify-content: space-between;
 }
 
+.servicios .servicio h5 {
+    padding: 0;
+}
+
 .servicios .servicio .opciones {
     display: flex;
     align-content: center;
+    align-items: center;
 }
 
 .servicios .servicio .opciones a {
     text-decoration: none;
     padding: 0px 10px;
+    cursor: pointer;
 }
 
 .servicios .servicio:not(:last-child) {

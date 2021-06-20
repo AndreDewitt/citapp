@@ -61,14 +61,14 @@ const renderNegocios = (json) => {
     json.forEach(el => {
         const div = document.createElement("div")
         const div2 = document.createElement("div")
-        const h3 = document.createElement("h3")
+        const h5 = document.createElement("h5")
         const link = document.createElement("a")
         const agendar = document.createElement("a")
 
         div.classList.add('servicio')
         div2.classList.add('opciones')
         
-        h3.innerHTML = el.nombre
+        h5.innerHTML = el.nombre
         
         link.setAttribute("href","http://Localhost/citapp/?controllers=agendarController&action=negocio&id="+el.id)
         link.classList.add('material-icons')
@@ -84,7 +84,7 @@ const renderNegocios = (json) => {
 
         div2.appendChild(link)
         div2.appendChild(agendar)
-        div.appendChild(h3)
+        div.appendChild(h5)
         div.appendChild(div2)
         fragment.appendChild(div)
     });
@@ -115,8 +115,8 @@ const renderHorarios = (json) => {
         div3.classList.add('hora')
 
         label.innerHTML = el.dia
-        di.innerHTML = el.disponibilidad
-        fecha_hora.innerHTML = el.fecha + ': ' + el.d + ' - ' + el.a
+        di.innerHTML = 'Lugares disponibles: ' + el.disponibilidad
+        fecha_hora.innerHTML = el.d + ' - ' + el.a
 
         label.setAttribute("for","radio_dia_"+el.id)
         radio.setAttribute("type","radio")

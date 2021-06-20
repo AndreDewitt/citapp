@@ -1,0 +1,33 @@
+.contenedor .dia_hora .dia,
+.contenedor .dia_hora .hora,
+.contenedor .dia_hora .opciones {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.modal form .dias_atencion {
+    line-height: 3em;
+}
+
+.modal form .dias_atencion label {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.modal form .dias_atencion label:hover {
+    background-color: var(--fondo-tarjeta);
+}
+
+.modal form .dias_atencion label:not(:last-child) {
+    margin: 0px 10px 0px 0px;
+}
+
+.modal form .dias_atencion input[type="checkbox"] {
+    display: none;
+}
+
+.modal form .dias_atencion input[type="checkbox"]:checked + label {
+    background-color: var(--azul);
+}

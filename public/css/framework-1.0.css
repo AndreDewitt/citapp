@@ -1,0 +1,340 @@
+body {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--fondo-principal);
+}
+
+/* 
+    Declaración de variables.
+*/
+:root {
+    --sombra: ;
+
+    --radius: 5px;
+
+    --rojo: #DE4132;
+    --amarillo: #EDB303;
+    --verde: #319F4D;
+}
+
+/* 
+    Asignación de variables en el tema oscuro.
+*/
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fondo-principal: rgb(32, 33, 37);
+        --fondo-auxiliar: rgb(32, 32, 32);
+        --fondo-auxiliar-03: rgba(32, 32, 32,0.3);
+
+        --focus: rgba(242, 242, 242, 0.3);
+        
+        --color-rojo: ;
+        --color-naranja: ;
+        --color-amarillo: ;
+        --color-verde: ;
+        --color-azul: ;
+        --color-texto: rgb(242, 242, 242);
+
+        --border: 1px solid rgba(242, 242, 242, 0.3);
+    }
+}
+
+/* 
+    Asignación de variables en el tema claro.
+*/
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* --fondo-principal: #202125;
+        --fondo-auxiliar: #202020; */
+        
+        --color-rojo: ;
+        --color-naranja: ;
+        --color-amarillo: ;
+        --color-verde: ;
+        --color-azul: ;
+        --color-texto: rgba(0,0,0,0.85);
+        
+        --border: 1px solid rgba(0,0,0,0.3);
+    }
+}
+
+/* 
+    Contenedores (layouts).
+*/
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-con {
+    margin: auto;
+    width: 70%;
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-center {
+    justify-content: center;
+}
+
+.align-right {
+    justify-content: flex-end;
+}
+
+.align-beetween {
+    justify-content: space-between;
+}
+
+.con {
+    padding: 15px;
+    background-color: var(--fondo-principal);
+}
+
+.con-round {
+    border-radius: var(--radius);
+}
+
+.con-w12 {
+    width: 100%;
+    max-width: 100%;
+}
+
+.con-w11 {
+    width: 91.6%;
+    max-width: 91.6%;
+}
+
+.con-w10 {
+    width: 83.3%;
+    max-width: 93.3%;
+}
+
+.con-w9 {
+    width: 75%;
+    max-width: 75%;
+}
+
+.con-w8 {
+    width: 66.6%;
+    max-width: 66.6%;
+}
+
+.con-w7 {
+    width: 58.3%;
+    max-width: 58.3%;
+}
+
+.con-w6 {
+    width: 50%;
+    max-width: 50%;
+}
+
+.con-w5 {
+    width: 41.6%;
+    max-width: 41.6%;
+}
+
+.con-w4 {
+    width: 25%;
+    max-width: 25%;
+}
+
+.con-w3 {
+    width: 16.6%;
+    max-width: 16.6%;
+}
+
+.con-w2 {
+    width: 8.3%;
+    max-width: 8.3%;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+    }
+}
+
+/* 
+    Estilos del texto.
+*/
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: var(--color-texto);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    /* padding-bottom: 15px; */
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+.txt-left {
+    text-align: left;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-justify {
+    text-align: justify;
+}
+
+/* 
+    Estilos de botones
+*/
+
+button, .btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--fondo-tarjeta);
+    border: 2px solid var(--fondo-tarjeta);
+}
+
+.btn {
+    margin: 15px 15px 15px 0px;
+    padding: 10px 20px;
+}
+
+.btn-icon {
+    padding: 10px 15px 10px 10px;
+}
+
+.btn-icon i {
+    padding: 0px 10px 0px 0px;
+}
+
+.btn-icon-self {
+    padding: 10px;
+}
+
+.btn-rojo {
+    background-color: var(--rojo);
+}
+
+.btn-verde {
+    background-color: var(--verde);
+}
+
+.btn-amarillo {
+    background-color: var(--amarillo);    
+}
+
+.btn-rojo-hover:hover {
+    background-color: var(--rojo);
+}
+
+.btn-verde-hover:hover {
+    background-color: var(--verde);
+}
+
+.btn-amarillo-hover:hover {
+    background-color: var(--amarillo);    
+}
+
+/* 
+    Estilos de formularios
+*/
+
+form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label {
+    font-size: 1em;
+}
+
+.form-control {
+    width: 100%;
+    margin: 15px 0px;
+    padding: 10px;
+    font-size: 1em;
+    background-color: var(--fondo-tarjeta);
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0px 0px 0px 0px var(--focus);
+    transition: all .2s;
+}
+
+.form-control:focus {
+    outline: none;
+    background-color: var(--fondo-auxiliar);
+    box-shadow: 0px 0px 0px 3px var(--focus);
+}
+
+/* 
+    Estilos de notificaciones
+*/
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--fondo-auxiliar-03);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.not-open {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 
+    Estilos de imagenes 
+*/
+
+img {
+    width: 100%;
+}
