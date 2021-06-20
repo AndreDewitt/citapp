@@ -32,7 +32,7 @@
                 for ($i=0; $i < count($array); $i++) {
                     $de = 'd_'.$array[$i];
                     $dis = 'di_'.$array[$i];
-                    $a = 'a_'.$array[$i]; 
+                    $a = 'a_'.$array[$i];
                     if (isset($_POST[$dis])) {
                         $this->model->setDia($dias[$aux]);
                         $this->model->setD($_POST[$de]);

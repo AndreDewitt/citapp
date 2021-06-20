@@ -55,6 +55,7 @@
             $this->model->setNombre($_POST['nombre']);
             $this->model->setCorreo($_POST['correo']);
             $this->model->setTel($_POST['tel']);
+            $this->model->setFecha($_POST['fecha']);
             $this->model->setServicio($_POST['select_servicios']);
             $this->model->setHorario($_POST['radio_dia']);
             $resultado = $this->model->insertar();

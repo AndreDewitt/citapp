@@ -14,7 +14,7 @@
         }
 
         public function setId($id) : void { $this->id = $id; }
-        
+
         public function setDia($dia) : void { $this->dia = $dia; }
         
         public function setD($d) : void { $this->d = $d; }
@@ -43,7 +43,7 @@
             $respuesta = mysqli_query($this->db, $sql);
             return $respuesta;
         }
-
+ 
         public function eliminar(){
             $sql = "DELETE FROM t_horario WHERE id = '$this->id'";
             $respuesta = mysqli_query($this->db, $sql);
@@ -51,7 +51,7 @@
         }
 
         public function actualizar(){
-            $sql = "UPDATE t_horario SET dia = '$this->dia', d = '$this->d', a = '$this->a', disponibilidad = '$this->disponibilidad', id_servicio = '$this->servicio' WHERE id = '$this->id'";
+            $sql = "UPDATE t_horario SET  dia = '$this->dia', d = '$this->d', a = '$this->a', disponibilidad = '$this->disponibilidad', id_servicio = '$this->servicio' WHERE id = '$this->id'";
             $respuesta = mysqli_query($this->db, $sql);
             return $respuesta;
         }

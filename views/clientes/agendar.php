@@ -85,6 +85,8 @@
                     <div class="fecha-hora">
                         <div class="titulo">
                             <h2>Selecciona la hora y fecha deseada</h2>
+                            <label for="fecha">Fecha: </label>
+                            <input type="date" name="fecha" id="fecha">
                         </div>
                         <div class="t_horario">
                         </div>

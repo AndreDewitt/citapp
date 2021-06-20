@@ -36,7 +36,7 @@
 
               function setContrasena($contrasena):void
               {
-                $this->contraseña = $contrasena;
+                $this->contrasena = $contrasena;
               }
 
               function setIdDuenio($idDuenio)

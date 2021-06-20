@@ -27,7 +27,7 @@
         }
 
         public function insertar () {
-            $sql = "INSERT INTO t_categorias(nombre) VALUES (
+            $sql = "INSERT INTO t_categoria(nombre) VALUES (
                 '$this->nombre'
             )";
 
@@ -36,13 +36,13 @@
         }
 
         public function eliminar () {
-            $sql = "DELETE FROM t_categorias WHERE id = '$this->id'";
+            $sql = "DELETE FROM t_categoria WHERE id = '$this->id'";
             $resultado = mysqli_query($this->db,$sql);
             return $resultado;
         }
         
         public function actualizar () {
-            $sql = "UPDATE t_categorias SET nombre = '$this->nombre' WHERE id = '$this->id'";
+            $sql = "UPDATE t_categoria SET nombre = '$this->nombre' WHERE id = '$this->id'";
             $resultado = mysqli_query($this->db,$sql);
             return $resultado;
         }

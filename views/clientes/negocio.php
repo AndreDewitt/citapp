@@ -43,7 +43,7 @@
                     <p><?=$informacion->descripcion?></p>
                 </div>
                 <div class="foto">
-                    <img style="max-width: 100%;" src="data:image/jpg;base64,<?php echo base64_encode($informacion->fotografia)?>" alt="" srcset="">
+                    <img style="max-width: 100%;" src="<?=$informacion->fotografia?>" alt="" srcset="">
                 </div>
             </div>
             <div class="titulo">

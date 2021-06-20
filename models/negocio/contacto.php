@@ -2,7 +2,7 @@
 <?php 
 
     require_once 'models/Model.php';
-    class contactoModel extends Model
+    class Contacto extends Model
     {
        public $id;
        public $Tel_local;

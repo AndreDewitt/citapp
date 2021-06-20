@@ -15,7 +15,16 @@
           }
       }
 
-      spl_autoload_register('autoloadNegocio');
-      spl_autoload_register('autoloadCliente');
+      function autoloadSeeder($class){
+        if (file_exists('database/'.$class.'.php')) {
+            include 'database/'.$class.'.php';
+        } else {
+            return false;
+        }
+    }
+
+    spl_autoload_register('autoloadNegocio');
+    spl_autoload_register('autoloadCliente');
+    spl_autoload_register('autoloadSeeder');
 
 ?>
