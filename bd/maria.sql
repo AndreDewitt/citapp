@@ -98,7 +98,9 @@ ALTER TABLE `t_contacto` ADD FOREIGN KEY (`id_negocio`) REFERENCES `t_negocio` (
 
 ALTER TABLE `t_ubicacion` ADD FOREIGN KEY (`id_negocio`) REFERENCES `t_negocio` (`id`);
 
-ALTER TABLE `t_citas` ADD FOREIGN KEY (`id_negocio`) REFERENCES `t_negocio` (`id`);
+ALTER TABLE `t_citas` ADD FOREIGN KEY (`id_servicio`) REFERENCES `t_servicio` (`id`);
+
+ALTER TABLE `t_citas` ADD FOREIGN KEY (`id_horario`) REFERENCES `t_horario` (`id`);
 
 ALTER TABLE `t_atencion` ADD FOREIGN KEY (`id_negocio`) REFERENCES `t_negocio` (`id`);
 

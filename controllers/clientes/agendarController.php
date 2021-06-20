@@ -41,6 +41,25 @@
             }
             echo json_encode($Array);
         }
+
+        public function filtrarNegocios () {
+            $servicios = $this->model->filtrar($_GET['id']);
+            $miArray = array();
+            while ($row = $servicios->fetch_array(MYSQLI_ASSOC)) {
+                $miArray[] = $row;
+            }
+            echo json_encode($miArray);
+        }
+
+        public function guardarCita () {
+            $this->model->setNombre($_POST['nombre']);
+            $this->model->setCorreo($_POST['correo']);
+            $this->model->setTel($_POST['tel']);
+            $this->model->setServicio($_POST['select_servicios']);
+            $this->model->setHorario($_POST['radio_dia']);
+            $resultado = $this->model->insertar();
+            echo $_POST['nombre'];
+        }
     }
 
 ?>

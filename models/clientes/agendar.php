@@ -3,44 +3,49 @@
     
     class Agendar extends Model {
         public $id;
-        public $fecha;
-        public $hora;
-        public $descripcion;
-        public $idNegocio;
+        public $nombre;
+        public $correo;
+        public $tel;
+        public $idServicio;
+        public $idHorario;
 
         public function __construct() {
             parent::__construct();
         }
         
         public function setId($id) : void { $this->id = $id;}
-        public function setFecha($fecha):void{$this->fecha=$fecha;}
-        public function setHora($hora):void{$this->hora=$hora;}
-        public function setDescripcion($descripcion):void{$this->descripcion=$descripcion;}
-        public function setIdNegocio($idNegocio):void{$this->idNegocio=$idNegocio;}
+        public function setNombre($nombre) : void { $this->nombre = $nombre;}
+        public function setCorreo($correo) : void { $this->correo = $correo;}
+        public function setTel($tel) : void { $this->tel = $tel;}
+        public function setServicio($idServicio) : void { $this->idServicio = $idServicio;}
+        public function setHorario($idHorario) : void { $this->idHorario = $idHorario;}
         
         public function getId(){return $this->id;}
-        public function getFecha(){return $this->fecha;}
-        public function getHora(){return $this->hora;}
-        public function getDescripcion(){return $this->descripcion;}
-        public function getIdNegocio(){return $this->idNegocio;}
+        public function getNombre () {
+            return $this->nombre;
+        }
+        public function getCorreo () {
+            return $this->correo;
+        }
+        public function getTel () {
+            return $this->tel;
+        }
+        public function getIdServicio () {
+            return $this->idServicio;
+        }
+        public function getIdHorario () {
+            return $this->idHorario;
+        }
 
         public function insertar(){
-            $sql="INSERT INTO t_citas(fecha,hora,descripcion,id_negocio) 
-            VALUES ('$this->fecha','$this->hora','$this->descripcion','$this->idNegocio')";
+            $sql="INSERT INTO t_citas(nombre,correo,tel,id_servicio,id_horario) 
+                VALUES ('$this->nombre','$this->correo','$this->tel','$this->idServicio','$this->idHorario')";
             $query=mysqli_query($this->db,$sql);
             return $query;
-
         }
 
         public function eliminar(){
             $sql="DELETE FROM t_citas WHERE id='$this->id'";
-            $query=mysqli_query($this->db,$sql);
-            return $query;
-        }
-
-        public function actualizar(){
-            $sql="UPDATE t_citas set fecha='$this->fecha', hora='$this->hora',descripcion='$this->descripcion'
-                                WHERE id='$this->id'";
             $query=mysqli_query($this->db,$sql);
             return $query;
         }

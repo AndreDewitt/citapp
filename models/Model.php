@@ -15,5 +15,10 @@
             $query = $this->db->query("SELECT * FROM $tabla WHERE $col = '$dato' ORDER BY id ASC");
             return $query;
         }
+
+        public function filtrar($id) {
+            $query = $this->db->query("SELECT id,nombre,id_categoria FROM t_negocio WHERE id_categoria = '$id'");
+            return $query;
+        }
     }
     
