@@ -14,7 +14,7 @@ require_once 'models/negocio/usuario.php';
     public function __construct() {
         $this->model = new Duenio();
         $this->negocio = new Negocio();
-        $this->contacto = new contactoModel();
+        $this->contacto = new Contacto();
         $this->usuario = new Usuario();
     }
 

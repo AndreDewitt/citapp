@@ -26,14 +26,15 @@ body .login .iniciar-sesion .contenedor h1 {
     text-align: center;
 }
 
+body .login .contenedor h4 {
+    padding: 0px 0px 20px 0px;
+}
+
 body .login .iniciar-sesion .contenedor form {
     width: 50%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    visibility:visible;
-    overflow: auto;
-
 }
 
 body .login .iniciar-sesion .contenedor form label,
@@ -49,15 +50,24 @@ body .login .iniciar-sesion .contenedor form .opciones {
 }
 
 body .login .iniciar-sesion .contenedor form .opciones a {
+    width: auto;
     text-decoration: none;
     text-align: center;
     padding: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+body .login .iniciar-sesion .contenedor form .opciones a:hover {
+    background-color: var(--fondo-tarjeta);
 }
 
 body .login .iniciar-sesion .contenedor form .opciones button,
 body .login .iniciar-sesion .contenedor form .opciones a {
     width: 100%;
     margin: 0px 0px 15px 0px;
+    text-align: center;
+    justify-content: center;
 }
 
 body .login .registrarse {
@@ -68,7 +78,7 @@ body .login .registrarse {
     opacity: 1;
 }
 
-body .login .ocultar{
+body .login .ocultar {
     display: none;
     width: 0%;
     opacity: 0;

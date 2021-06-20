@@ -23,7 +23,7 @@
                             <h5>Horario de atención general</h5>
                         </div>
                         <div class="con-w6 txt-right">
-                            <button class="btn-icon-self btn-agregar material-icons">add</button>
+                            <button id="btn-atencion" class="btn-icon-self btn-atencion material-icons">add</button>
                         </div>
                     </div>
                     <div class="titulo row-con con-w12">
@@ -31,7 +31,7 @@
                             <h5>Horarios registrados por servicio</h5>
                         </div>
                         <div class="con-w6 txt-right">
-                            <button class="btn-icon-self btn-agregar material-icons">add</button>
+                            <button id="btn-agregar-servicio" class="btn-icon-self btn-agregar-servicio material-icons">add</button>
                         </div>
                     </div>
                     <?php while($horario=$tablas->fetch_object()):?>
@@ -43,10 +43,10 @@
                             <div class="hora con-w5">
                                 <p>Horas disponible: <?=$horario->d?></p> - <p><?=$horario->a?></p>
                             </div>
-                            <div class="opciones con-w4 txt-right">
-                                <button class="btn btn-amarillo-hover" data-id="<?=$horario->id?>" data-dia="<?=$horario->d?>" data-d="<?=$horario->d?>" data-a="<?=$horario->a?>" data-dispon="<?=$horario->disponibilidad?>">
+                            <div class="opciones con-w4 txt-center">
+                                <!-- <button disabled class="btn btn-amarillo-hover" data-id="<?=$horario->id?>" data-dia="<?=$horario->d?>" data-d="<?=$horario->d?>" data-a="<?=$horario->a?>" data-dispon="<?=$horario->disponibilidad?>">
                                     Actualizar
-                                </button>
+                                </button> -->
                                 <button class="btn btn-rojo-hover">Eliminar</button>
                             </div>
                         </div>
@@ -106,7 +106,17 @@
                                 </section>
                                 <div class="opciones con-w12">
                                     <button class="btn ">Confirmar</button>
-                                    <label class="btn btn-rojo-hover btn-cerrar">Cancelar</label>
+                                    <label id="btn-agregar-cancelar" class="btn btn-rojo-hover btn-cerrar">Cancelar</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="modal modal-ocultar">
+                        <div class="con-w9">
+                            <form action="">
+                                <div class="opciones">
+                                    <label id="btn-atencion-cancelar" class="btn btn-rojo-hover btn-cerrar">Cancelar</label>
                                 </div>
                             </form>
                         </div>
@@ -115,7 +125,7 @@
             </div>
         </div>
     </div>
-    <script src="public/js/form-horario.js?1.1"></script>
+    <script src="public/js/form-horario.js?1.2"></script>
 </body>
 </html>
 

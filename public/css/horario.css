@@ -31,3 +31,7 @@
 .modal form .dias_atencion input[type="checkbox"]:checked + label {
     background-color: var(--azul);
 }
+
+.contenedor .dia_hora .opciones {
+    justify-content: flex-end;
+}

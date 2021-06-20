@@ -1,0 +1,42 @@
+.bienvenida {
+    min-height: 100vh;
+    align-content: center;
+}
+
+.bienvenida .logo {
+    padding: 0px 0px 30px 0px;
+}
+
+.bienvenida .con a {
+    height: 300px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.bienvenida .con a .icono,
+.bienvenida .con a .texto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bienvenida .con a .icono {
+    width: 50%;
+}
+
+.bienvenida .con a .icono i {
+    font-size: 100px;
+}
+
+.bienvenida .con a .texto p {
+    width: 100%;
+    text-align: center;
+}
+
+.bienvenida .con a .texto {
+    padding: 20px 0px 0px 0px;
+}

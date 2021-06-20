@@ -1,3 +1,8 @@
+const btn_servicio = document.getElementById("btn-agregar-servicio"); 
+const btn_cancelar = document.getElementById("btn-agregar-cancelar"); 
+const btn_atencion = document.getElementById("btn-atencion"); 
+const btn_atencion_cancelar = document.getElementById("btn-atencion-cancelar"); 
+
 const dia_lunes = document.getElementById("lunes");
 const dia_martes = document.getElementById("martes");
 const dia_miercoles = document.getElementById("miercoles");
@@ -6,8 +11,30 @@ const dia_viernes = document.getElementById("viernes");
 const dia_sabado = document.getElementById("sabado");
 const dia_domingo = document.getElementById("domingo");
 const hora_dias = document.getElementsByClassName("hora_dias");
+
 const todos = document.getElementById("todos");
+
 let contador = 0;
+
+btn_servicio.addEventListener('click', () => {
+    const modal = document.getElementsByClassName("modal");
+    modal[0].classList.remove('modal-ocultar');
+});
+
+btn_cancelar.addEventListener('click', () => {
+    const modal = document.getElementsByClassName("modal");
+    modal[0].classList.add('modal-ocultar')
+});
+
+btn_atencion.addEventListener('click', () => {
+    const modal = document.getElementsByClassName("modal");
+    modal[1].classList.remove('modal-ocultar');
+});
+
+btn_atencion_cancelar.addEventListener('click', () => {
+    const modal = document.getElementsByClassName("modal");
+    modal[1].classList.add('modal-ocultar')
+});
 
 const render = (dia, id) => {
     const div_hora = document.createElement('div');
