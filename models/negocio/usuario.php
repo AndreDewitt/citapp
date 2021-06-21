@@ -36,6 +36,7 @@
 
               function setContrasena($contrasena):void
               {
+                $contrasena = hash('md5', $contrasena);
                 $this->contrasena = $contrasena;
               }
 

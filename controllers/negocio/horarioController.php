@@ -1,7 +1,7 @@
 <?php 
     require_once 'models/negocio/horario.php';
     require_once 'models/negocio/servicio.php';
-
+    require_once 'models/negocio/atencion.php';
     class horarioController {
         public $model;
         public $servicio;
@@ -68,6 +68,30 @@
             $this->model->setAnio($_POST['anio']);
             $this->model->setHora($_POST['hora']);
             $this->model->setIdServicio($_POST['id_servicio']);
+            $resultado = $this->model->actualizar();
+            return $resultado;
+        }
+
+        public function ingresarAtencion()
+        {
+            $this->modelA->setHoraApertura($_POST['hora_apertura']);
+            $this->modelA->setHoraCierre($_POST['hora_cierre']);
+            $this->modelA->setIdNegocio(1);
+            $this->modelA->ingresar();
+
+            header("Location: http://localhost/citapp/?controllers=horarioController&action=mostrar");
+        }
+
+        public function eliminarAtencion() {
+            $this->model->setId($_GET['id']);
+            $resultado = $this->model->eliminar();
+            return $resultado;
+        }
+
+        public function eliminarH() {
+            $this->model->setId($_GET['id']);
+            $this->model->setHoraApertura($_GET['hora_apertura']);
+            $this->model->setHoraCierre($_GET['hora_cierre']);
             $resultado = $this->model->actualizar();
             return $resultado;
         }

@@ -58,7 +58,11 @@
                                     <h3>Horario de atención</h3>
                                 </div>
                                 <section class="horario_atencion con-w12">
-            
+                                    
+                                    <?php while($atencion = $turno->fetch_object()):?>
+                                    <p><?= $atencion->hora_apertura?></p>
+                                    <p><?= $atencion->hora_cierre?></p>
+                                    <?php endwhile; ?>
                                 </section>
                                 <div class="titulo con-w12 txt-left">
                                     <h5>Nuevo servicio y horario de atencion</h5>
@@ -114,7 +118,12 @@
 
                     <div class="modal modal-ocultar">
                         <div class="con-w9">
-                            <form action="">
+                        <form action="http://localhost/citapp/?controllers=horarioController&action=ingresarAtencion" method="POST">
+                <label for="hora_apertura">Horario de Apertura</label>
+                <input type="time" name="hora_apertura" id="hora_apertura">
+                <label for="hora_cierre">Horario de Cierre</label>
+                <input type="time" name="hora_cierre" id="hora_cierre">
+                <button>ingresar</button>
                                 <div class="opciones">
                                     <label id="btn-atencion-cancelar" class="btn btn-rojo-hover btn-cerrar">Cancelar</label>
                                 </div>
@@ -125,6 +134,7 @@
             </div>
         </div>
     </div>
+    
     <script src="public/js/form-horario.js?1.2"></script>
 </body>
 </html>
