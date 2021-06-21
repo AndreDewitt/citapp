@@ -4,7 +4,7 @@ const registrarse = document.getElementsByClassName('registrarse');
 
 btn_registro[0].addEventListener('click', () => {
     const clase = registrarse[0].getAttribute("class");
-    if (clase === 'registrarse ocultar') {
+    if (clase === 'registrarse con-w5 ocultar') {
         registrarse[0].classList.remove('ocultar');
         iniciar_sesion[0].classList.add('ocultar');
     } else {
@@ -15,7 +15,7 @@ btn_registro[0].addEventListener('click', () => {
 
 btn_registro[1].addEventListener('click', () => {
     const clase = registrarse[0].getAttribute("class");
-    if (clase === 'registrarse ocultar') {
+    if (clase === 'registrarse con-w5 ocultar') {
         registrarse[0].classList.remove('ocultar');
         iniciar_sesion[0].classList.add('ocultar');
     } else {

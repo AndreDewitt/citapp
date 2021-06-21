@@ -5,6 +5,7 @@
     <?php require_once 'public/libs/libs.php' ?>
 </head>
 <body>
+    <i id="icono" class="icono-menu btn btn-icon-self material-icons">menu</i>
     <div class="contenedor">
         <div class="con-w2">
             <?php require_once 'views/negocio/modulos/menu.php' ?>
@@ -19,10 +20,12 @@
                 <section class="row-con">
                     <div class="con con-w12">
                         <div class="row-con con-w12 txt-left">
-                            <div class="con con-w12">
+                            <div class="con-w12">
                                 <h4>Información del negocio</h4>
                             </div>
                         </div>
+                    </div>
+                    <div class="descripcion con con-w12">
                         <div class="nombre-negocio">
                             <h5>Nombre del negocio: <?=$negocio->nombre;?></h5>
                         </div>
@@ -32,7 +35,7 @@
                     </div>
                     <div class="con con-w12">
                         <div class="titulo row-con con-w12 txt-left">
-                            <div class="con con-w7">
+                            <div class="con-w7">
                                 <h4>Descripción</h4>
                             </div>
                             <div class="opciones row-con con-w5 align-right">
@@ -50,7 +53,7 @@
                     </div>
                     <div class="con con-w12">
                         <div class="titulo row-con con-w12 txt-left">
-                            <div class="con con-w7">
+                            <div class="con-w7">
                                 <h4>Fotografía</h4>
                             </div>    
                         </div>
@@ -62,7 +65,7 @@
                     </div>
                     <div class="titulo con con-w12">
                         <div class="titulo row-con con-w12 txt-left">
-                            <div class="con con-w7">
+                            <div class="con-w7">
                                 <h4>Ubicación</h4>
                             </div>
                             <div class="opciones row-con con-w5 align-right">
@@ -144,5 +147,6 @@
         </div>
     </div>
     <script src="public/js/info.js"></script>
+    <script src="public/js/menu.js"></script>
 </body>
 </html>

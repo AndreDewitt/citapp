@@ -7,7 +7,6 @@
 <body>
     <section class="login contenedor">
         <div class="fotos con-w7">
-            <img src="" alt="">
         </div>
         <div class="iniciar-sesion con-w5">
             <div class="contenedor">
@@ -30,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div class="registrarse ocultar">
+        <div class="registrarse con-w5 ocultar">
             <div class="contenedor">
                 <div class="row-con con-w7">
                     <div class="con con-w12 txt-center">

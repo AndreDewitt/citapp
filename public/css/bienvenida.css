@@ -7,8 +7,12 @@
     padding: 0px 0px 30px 0px;
 }
 
+.bienvenida .con {
+    width: 300px;
+}
+
 .bienvenida .con a {
-    height: 300px;
+    padding: 50px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -39,4 +43,24 @@
 
 .bienvenida .con a .texto {
     padding: 20px 0px 0px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .bienvenida .logo {
+        padding: 30px 0px;
+    }
+
+    .bienvenida .logo svg {
+        width: 60%;
+        margin: auto;
+        display: flex;
+    }
+
+    .bienvenida .con a {
+        padding: 30px;
+    }
+
+    .bienvenida .con a .icono i {
+        font-size: 70px;
+    }
 }

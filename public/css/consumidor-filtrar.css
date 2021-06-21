@@ -112,3 +112,9 @@
 .servicios .servicio:not(:last-child) {
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .agendar, .busqueda, .servicios {
+        width: 90%;
+    }
+}

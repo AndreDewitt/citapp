@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="registrarse ocultar">
+        <div class="registrarse con-w5 ocultar">
             <div class="contenedor">
                 <div class="row-con con-w7">
                     <div class="con con-w12 txt-center">
@@ -79,6 +79,6 @@
             </div>
         </div>
     </section>
-    <script src="public/js/form-sesion.js"></script>
+    <script src="public/js/form-sesion.js?1.1"></script>
 </body>
 </html>

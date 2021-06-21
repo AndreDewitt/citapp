@@ -37,7 +37,6 @@
 }
 
 .modal .agendar-cita {
-    
     padding: 10px;
 }
 
@@ -162,4 +161,15 @@
     visibility: hidden;
     opacity: 0;
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .modal .contenedor-modal {
+        width: 90%;
+    }
+
+    .modal #agendar-cita {
+        width: 100%;
+        padding: 10px;
+    }
 }

@@ -55,3 +55,25 @@ body .informacion .negocio .ubicacion .mapa {
     background-color: var(--fondo-tarjeta);
     border-radius: var(--border-radius);
 }
+
+@media screen and (max-width: 768px) {
+    body .informacion {
+        width: 90%;
+    }
+
+    body .informacion .negocio .descripcion .info,
+    body .informacion .negocio .ubicacion .direccion {
+        width: 100%;
+    }
+
+    body .informacion .negocio .descripcion,
+    body .informacion .negocio .ubicacion {
+        flex-wrap: wrap;
+    }
+
+    body .informacion .negocio .descripcion .foto,
+    body .informacion .negocio .ubicacion .mapa {
+        width: 100%;
+        margin: 20px 0px;
+    }
+}

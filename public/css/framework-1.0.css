@@ -15,12 +15,22 @@ body {
     --rojo: #DE4132;
     --amarillo: #EDB303;
     --verde: #319F4D;
+
+            --fondo-principal: rgb(32, 33, 37);
+        --fondo-auxiliar: rgb(32, 32, 32);
+        --fondo-auxiliar-03: rgba(32, 32, 32,0.3);
+
+        --focus: rgba(242, 242, 242, 0.3);
+        
+        --color-texto: rgb(242, 242, 242);
+
+        --border: 1px solid rgba(242, 242, 242, 0.3);
 }
 
 /* 
     Asignación de variables en el tema oscuro.
 */
-
+/* 
 @media (prefers-color-scheme: dark) {
     :root {
         --fondo-principal: rgb(32, 33, 37);
@@ -38,16 +48,16 @@ body {
 
         --border: 1px solid rgba(242, 242, 242, 0.3);
     }
-}
+} */
 
 /* 
     Asignación de variables en el tema claro.
 */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
-        /* --fondo-principal: #202125;
-        --fondo-auxiliar: #202020; */
+        --fondo-principal: #202125;
+        --fondo-auxiliar: #202020;
         
         --color-rojo: ;
         --color-naranja: ;
@@ -58,7 +68,7 @@ body {
         
         --border: 1px solid rgba(0,0,0,0.3);
     }
-}
+} */
 
 /* 
     Contenedores (layouts).
@@ -154,12 +164,6 @@ body {
 .con-w2 {
     width: 8.3%;
     max-width: 8.3%;
-}
-
-@media screen and (max-width: 768px) {
-    .contenedor {
-        width: 90%;
-    }
 }
 
 /* 
@@ -339,4 +343,27 @@ label {
 
 img {
     width: 100%;
+}
+
+/* 
+    Responsive 
+*/
+
+@media screen and (max-width: 768px) {
+    .row-con {
+        width: 95%;
+        max-width: 95%;
+        margin: auto;
+    }
+
+    .con,
+    .con-w2,.con-w3,.con-w4,.con-w5, .con-w6, .con-w7, .con-w8, .con-w9, .con-w10, .con-w11, .con-w12 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .btn {
+        margin: 0px 0px 0px 0px;
+        padding: 10px 20px;
+    }
 }

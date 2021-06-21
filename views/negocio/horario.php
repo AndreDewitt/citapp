@@ -5,6 +5,7 @@
     <?php require_once 'public/libs/libs.php' ?>
 </head>
 <body>
+    <i id="icono" class="icono-menu btn btn-icon-self material-icons">menu</i>
     <div class="contenedor">
         <div class="con-w2">
             <?php require_once 'views/negocio/modulos/menu.php' ?>
@@ -42,7 +43,7 @@
                         $tablas = $this->model->buscarPor('t_horario','id_servicio',$servicio->id);
                         while ($horario = $tablas->fetch_object()):
                 ?>
-                            <div class="row-con con-w12 dia_hora align-beetween">
+                            <div class="row-con con-round con-w12 dia_hora align-beetween" style="margin:0px 0px 15px 0px;padding: 15px;background-color: var(--fondo-tarjeta);">
                                 <div class="dia con-w3">
                                     <p class="con-w12"><?=$horario->dia?></p>
                                     <p>Disponibilidad: <?=$horario->disponibilidad?></p>
@@ -137,6 +138,7 @@
     </div>
     
     <script src="public/js/form-horario.js?1.2"></script>
+    <script src="public/js/menu.js"></script>
 </body>
 </html>
 

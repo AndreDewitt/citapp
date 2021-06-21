@@ -35,3 +35,17 @@
 .contenedor .dia_hora .opciones {
     justify-content: flex-end;
 }
+
+@media screen and (max-width: 768px) {
+    .modal form {
+        width: 100%;
+    }
+
+    .modal form .opciones {
+        flex-wrap: wrap;
+    }
+
+    .modal form .opciones input {
+        width: 100%;
+    }
+}

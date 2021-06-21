@@ -1,0 +1,18 @@
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--azul) }
+
+*::-webkit-scrollbar-track {
+  background: var(--fondo-principal);
+  border-radius: 50px;}
+
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-track:active {
+  background: var(--fondo-principal);}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--fondo-tarjeta);  
+  border-radius: 3px;}

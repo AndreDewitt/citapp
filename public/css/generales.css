@@ -10,9 +10,15 @@
     --rojo: #DE4132;
     --amarillo: #EDB303;
     --verde: #319F4D;
+
+    --fondo-principal:#26272D;
+    --fondo-principal-transparente:rgba(38, 39, 45, 0.9);
+    --fondo-tarjeta:#323640;
+    --azul:#2D9FFC;
+    --texto:#F2F2F2;
 }
 
-@media(prefers-color-scheme: light){
+/* @media(prefers-color-scheme: light){
     :root{
         --fondo-principal:#F1F8FF;
         --fondo-tarjeta:#FEFEFE;
@@ -29,7 +35,7 @@
         --azul:#2D9FFC;
         --texto:#F2F2F2;
     }
-}
+} */
 
 h1,h2,h3,h4{
     font-weight: 500;
