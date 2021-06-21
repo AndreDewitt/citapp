@@ -66,19 +66,20 @@ CREATE TABLE `t_bitacora` (
 
 CREATE TABLE `t_categoria` (
   `id` int(16) NOT NULL,
-  `nombre` varchar(255) DEFAULT NULL
+  `nombre` varchar(255) DEFAULT NULL,
+  `icon` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `t_categoria`
 --
 
-INSERT INTO `t_categoria` (`id`, `nombre`) VALUES
-(1, 'categoria1'),
-(2, 'categoria2'),
-(3, 'categoria3'),
-(4, 'categoria4'),
-(5, 'categoria5');
+INSERT INTO `t_categoria` (`id`, `nombre`, `icon`) VALUES
+(1, 'categoria1', ``),
+(2, 'categoria2', ``),
+(3, 'categoria3', ``),
+(4, 'categoria4', ``),
+(5, 'categoria5', ``);
 
 -- --------------------------------------------------------
 

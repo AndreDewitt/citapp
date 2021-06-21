@@ -16,20 +16,16 @@
                 <h4>Agenda una cita</h4>
             </div>
             <div class="negocios">
-                <?php 
-                    $iconos = ['restaurant','content_cut','health_and_safety'];
-                    $i = 0;
-                    while ($categoria = $categorias->fetch_object()) : 
-                ?>
+                <?php while ($categoria = $categorias->fetch_object()) : ?>
                         <div id="categoria_<?=$categoria->id?>" class="negocio categoria" data-id="<?=$categoria->id?>">
                             <div class="icono">
                                 <i class="material-icons">
-                                    <?php echo $iconos[$i]; ?>
+                                    <?=$categoria->icono?>
                                 </i>
                             </div>
                             <div class="texto"><?=$categoria->nombre?></div>
                         </div>
-                <?php $i++; endwhile; ?>
+                <?php endwhile; ?>
                 <div id="categoria_0" class="negocio categoria">
                     <div class="icono">
                         <i class="material-icons">
