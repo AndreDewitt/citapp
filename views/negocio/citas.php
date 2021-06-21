@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require_once 'public/libs/libs.php' ?>
     <title>Document</title>
 </head>
 <body>
@@ -115,12 +116,12 @@
             </table>
         </div>
     </div>
-    
-    <div class="contenedor_reservas">
+    <!--  
         <div class="sin_reservas">
             <p>No hay citas reservadas</p>
             <button class="btn aceptar">Aceptar</button>
         </div>
+    <div class="contenedor_reservas">
         <div class="reservas">
             <div class="reserva terminado">
                 <div class="informacion">
@@ -131,21 +132,24 @@
                     <h2>00:00</h2>
                 </div>
             </div>
+    -->    
             <?php while($cita = $tablas->fetch_object()):?>
             <div class="reserva">
                 <div class="informacion">
+                <h2>Servicio:<?= $cita->nombre_servicio?></h2>
                     <p>Nombre: <?= $cita->nombre?></p>
                     <p>Correo: <?= $cita->correo?></p>
                     <p>Telefono: <?= $cita->tel?></p>
                     <p>Fecha: <?= $cita->fecha?></p>
-                    <p>Servicio: <?= $cita->nombre_servicio?></p>
                 </div>
                 <div class="hora">
-                    <h2><?=$cita->d?></h2>
-                    <h2><?=$cita->a?></h2>
+                    <h5>De: <?=$cita->d?></h5>
+                    <h5>A: <?=$cita->a?></h5>
                 </div>
             </div>
             <?php endwhile;?>
+            <!--  
+
             <div class="reserva cancelado">
                 <div class="informacion">
                     <p>Nombre</p>
@@ -156,6 +160,8 @@
                 </div>
             </div>
         </div>
+        <button id="aceptar" class="btn aceptar">Aceptar</button>
+            -->
     </div>
 </div>
 </body>

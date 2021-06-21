@@ -12,6 +12,7 @@
         public function mostrar(){
             $this->model->setIdNegocio(1);
             $tablas = $this->model->mostrarTodo();
+            $aux = $this->model->mostrarTodo();
             if (isset($_SESSION['id_duenio']) && isset($_SESSION['id_negocio'])) {
                 require_once 'views/negocio/citas.php';
             } else {
