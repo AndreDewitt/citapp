@@ -2,21 +2,22 @@
     require_once 'models/negocio/negocio.php';
     require_once 'models/negocio/ubicacion.php';
 
-    class negocioController{
+    class negocioController {
         public $model;
         public $mod;
         
         public function __construct() {
-         $this->model = new Negocio();   
-         $this->mod = new Ubicacion();   
+            $this->model = new Negocio();   
+            $this->mod = new Ubicacion();   
         }
 
         public function mostrar(){
-            $tablas = $this->model->mostrar('t_negocio');
-            $ubicacion = $this->model->mostrar('t_ubicacion');
+            $tablas = $this->model->buscarPor('t_negocio','id',$_SESSION['id_negocio']);
+            $ubicacion = $this->model->buscarPor('t_ubicacion','id_negocio',$_SESSION['id_negocio']);
+            $duenios = $this->model->buscarPor('t_duenios','id',$_SESSION['id_duenio']);
             $categoria = $this->model->mostrar('t_categoria');
             $negocio = $tablas->fetch_object();
-            $ubicaciones = $ubicacion->fetch_object();
+            $duenio = $duenios->fetch_object();
             if (isset($_SESSION['id_duenio']) && isset($_SESSION['id_negocio'])) {
                 require_once 'views/negocio/informacion.php';
             } else {
@@ -38,7 +39,7 @@
             $this->mod->setCP($_POST['cp']);            
             $this->mod->setAlcaldia($_POST['alcaldia']);            
             $this->mod->setCiudad($_POST['ciudad']);
-            $this->mod->setIdN(2);
+            $this->mod->setIdN($_SESSION['id_negocio']);
             
             $resultado = $this->mod->ingresar();
 
@@ -80,7 +81,7 @@
         }
 
         public function actualizarDF(){
-            $this->model->setId(2);
+            $this->model->setId($_SESSION['id_negocio']);
             $this->model->setDescripcion($_POST['descripcion']);
             $imagen = addslashes(file_get_contents($_FILES['fotografias']['tmp_name']));
             $this->model->setFotografia($imagen);

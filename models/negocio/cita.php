@@ -37,7 +37,7 @@
         }
 
         public function mostrarTodo(){
-            $sql = "SELECT t_citas.id,t_citas.nombre,t_citas.correo,t_citas.tel,t_citas.fecha,t_horario.d,t_horario.a,t_servicio.nombre AS nombre_servicio FROM t_citas,t_servicio,t_horario, t_negocio 
+            $sql = "SELECT t_citas.id,t_citas.nombre,t_citas.correo,t_citas.tel,t_horario.d,t_horario.a,t_servicio.nombre AS nombre_servicio FROM t_citas,t_servicio,t_horario, t_negocio 
             WHERE t_servicio.id_negocio = t_negocio.id AND t_servicio.id = t_citas.id_servicio AND t_horario.id = t_citas.id_horario AND t_negocio.id ='$this->id_negocio'";
             $resultado = mysqli_query($this->db, $sql);
             return $resultado;

@@ -56,7 +56,7 @@ require_once 'models/negocio/usuario.php';
                     $resultado = $this->contacto->insertar();
             
                     if ($resultado) {
-                        header("Location: http://localhost/citapp/?controllers=duenioController&action=mostrar");
+                        header("Location: http://localhost/citapp/?controllers=duenioController&action=login");
                     } else {
                         echo "la mama del mono";
                     }

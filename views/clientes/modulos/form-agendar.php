@@ -31,7 +31,7 @@
             <div class="opciones">
                 <span class="btn btn-anterior btn-oculto">Anterior</span>
                 <span class="btn btn-siguiente ">Siguiente</span>
-                <button class="btn btn-finalizar btn-oculto" value="Hola">Finalizar</button>
+                <button class="btn btn-finalizar btn-oculto">Finalizar</button>
                 <span class="btn btn-cerrar">Cancelar</span>
             </div>
         </form>

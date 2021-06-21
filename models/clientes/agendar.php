@@ -31,8 +31,8 @@
         public function getIdHorario () { return $this->idHorario; }
 
         public function insertar(){
-            $sql="INSERT INTO t_citas(nombre,correo,tel,fecha,id_servicio,id_horario) 
-                VALUES ('$this->nombre','$this->correo','$this->tel','$this->fecha','$this->idServicio','$this->idHorario')";
+            $sql="INSERT INTO t_citas(nombre,correo,tel,id_servicio,id_horario) 
+                VALUES ('$this->nombre','$this->correo','$this->tel','$this->idServicio','$this->idHorario')";
             $query=mysqli_query($this->db,$sql);
             return $query;
         }

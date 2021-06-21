@@ -20,7 +20,7 @@
         public function insertar() {
             $this->model->setNombre($_POST['nombre']);
             $this->model->setDescripcion($_POST['descripcion']);
-            $this->model->setIdNegocio(2);
+            $this->model->setIdNegocio($_SESSION['id_negocio']);
             $resultado = $this->model->insertar();
             return $resultado;
         }

@@ -7,7 +7,6 @@ const guardarCita = () => {
     };
     fetch("http://localhost/citapp/?controllers=agendarController&action=guardarCita",opciones)
     .then((res) => {
-        console.log(res);
         location.reload();
     })
     .catch()

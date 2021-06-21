@@ -5,14 +5,15 @@
     class citaController{    
         public $model;
         public $model_horario;
+
         public function __construct() {
             $this->model = new Cita();
             $this->model_horario = new Horario();
         }
+
         public function mostrar(){
-            $this->model->setIdNegocio(1);
+            $this->model->setIdNegocio($_SESSION['id_negocio']);
             $tablas = $this->model->mostrarTodo();
-            $aux = $this->model->mostrarTodo();
             if (isset($_SESSION['id_duenio']) && isset($_SESSION['id_negocio'])) {
                 require_once 'views/negocio/citas.php';
             } else {

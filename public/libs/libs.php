@@ -9,8 +9,9 @@
 <link rel="stylesheet" href="public/css/consumidor-informacion.css">
 <link rel="stylesheet" href="public/css/horario.css?1.3">
 <link rel="stylesheet" href="public/css/menu.css">
+<link rel="stylesheet" href="public/css/cita.css">
 <link rel="stylesheet" href="public/css/login.css?2.3">
-<link rel="stylesheet" href="public/css/framework-1.0.css?1.7">
+<link rel="stylesheet" href="public/css/framework-1.0.css?1.8">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

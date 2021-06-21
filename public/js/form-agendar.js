@@ -53,7 +53,7 @@ select.addEventListener('click', (evt) => {
 
 form_agendar.addEventListener('submit', evt => {
     evt.preventDefault();
-        guardarCita();
+    guardarCita();
 });
 
 btn_siguiente[0].addEventListener('click', () => {

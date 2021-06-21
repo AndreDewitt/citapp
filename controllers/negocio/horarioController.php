@@ -4,16 +4,18 @@
     require_once 'models/negocio/atencion.php';
     class horarioController {
         public $model;
+        public $modalA;
         public $servicio;
 
         public function __construct () {
             $this->model = new Horario();
             $this->servicio = new Servicio();
+            $this->modelA = new Atencion();
         }
 
         public function mostrar () {
-            $tablas = $this->model->mostrar('t_horario');
-            $servicios = $this->model->mostrar('t_servicio');
+            $servicios = $this->model->buscarPor('t_servicio','id_negocio',$_SESSION['id_negocio']);
+            $turno= $this->model->buscarPor('t_atencion','id_negocio',$_SESSION['id_negocio']);
             if (isset($_SESSION['id_duenio']) && isset($_SESSION['id_negocio'])) {
                 require_once 'views/negocio/horario.php';
             } else {
@@ -27,7 +29,7 @@
             if (!empty($dias)) {
                 $this->servicio->setNombre($_POST['nombre']);
                 $this->servicio->setDescripcion($_POST['descripcion']);
-                $this->servicio->setIdNegocio(2);
+                $this->servicio->setIdNegocio($_SESSION['id_negocio']);
                 $this->servicio->insertar();
                 $this->servicio->getLastId();
                 $res = $this->servicio->getId();
@@ -76,7 +78,7 @@
         {
             $this->modelA->setHoraApertura($_POST['hora_apertura']);
             $this->modelA->setHoraCierre($_POST['hora_cierre']);
-            $this->modelA->setIdNegocio(1);
+            $this->modelA->setIdNegocio($_SESSION['id_negocio']);
             $this->modelA->ingresar();
 
             header("Location: http://localhost/citapp/?controllers=horarioController&action=mostrar");
