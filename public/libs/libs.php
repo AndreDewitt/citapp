@@ -19,5 +19,5 @@
 <link rel="apple-touch-startup-image" href="Logo-Pixki_16.png">
 <link rel="apple-touch-icon" href="Logo-Pixki_16.png">
 
-<link rel="manifest" href="manifest.json?1.1">
+<link rel="manifest" href="manifest.json?1.2">
 <script src="script.js"></script>
