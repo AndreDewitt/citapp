@@ -12,7 +12,11 @@
         public function mostrar(){
             $this->model->setIdNegocio(1);
             $tablas = $this->model->mostrarTodo();
-            require_once 'views/negocio/citas.php';
+            if (isset($_SESSION['id_duenio']) && isset($_SESSION['id_negocio'])) {
+                require_once 'views/negocio/citas.php';
+            } else {
+                header("Location: http://localhost/citapp/?controllers=duenioController&action=login");
+            }
         }   
     }
 ?>

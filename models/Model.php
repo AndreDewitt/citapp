@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once 'bd/conexion.php';
     class Model {
         public $db;

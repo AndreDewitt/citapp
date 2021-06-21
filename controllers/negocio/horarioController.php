@@ -14,7 +14,11 @@
         public function mostrar () {
             $tablas = $this->model->mostrar('t_horario');
             $servicios = $this->model->mostrar('t_servicio');
-            require_once 'views/negocio/horario.php';
+            if (isset($_SESSION['id_duenio']) && isset($_SESSION['id_negocio'])) {
+                require_once 'views/negocio/horario.php';
+            } else {
+                header("Location: http://localhost/citapp/?controllers=duenioController&action=login");
+            }
         }
 
         public function insertar(){

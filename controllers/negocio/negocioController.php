@@ -17,7 +17,11 @@
             $categoria = $this->model->mostrar('t_categoria');
             $negocio = $tablas->fetch_object();
             $ubicaciones = $ubicacion->fetch_object();
-            require_once 'views/negocio/informacion.php';
+            if (isset($_SESSION['id_duenio']) && isset($_SESSION['id_negocio'])) {
+                require_once 'views/negocio/informacion.php';
+            } else {
+                header("Location: http://localhost/citapp/?controllers=duenioController&action=login");
+            }
         }
 
         public function crear(){

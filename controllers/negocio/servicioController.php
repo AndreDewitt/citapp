@@ -10,7 +10,11 @@
 
         public function mostrar () {
             $tablas = $this->model->mostrar('t_servicio');
-            header("Location: http://localhost/citapp/?controllers=horarioController&action=mostrar");
+            if (isset($_SESSION['id_duenio']) && isset($_SESSION['id_negocio'])) {
+                header("Location: http://localhost/citapp/?controllers=horarioController&action=mostrar");
+            } else {
+                header("Location: http://localhost/citapp/?controllers=duenioController&action=login");
+            }
         }
 
         public function insertar() {

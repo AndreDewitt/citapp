@@ -47,7 +47,8 @@
 
 
               function insertarUsuario() {
-                $sql= "INSERT INTO t_usuarios(usuario,contrasenia,id_duenio) VALUES ('$this->usuario','$this->contrasena','$this->idDuenio')";
+                $password = password_hash($this->contrasena, PASSWORD_DEFAULT, ['cost' => 10]);                
+                $sql= "INSERT INTO t_usuarios(usuario,contrasenia,id_duenio) VALUES ('$this->usuario','$password','$this->idDuenio')";
                 $query = mysqli_query($this->db,$sql);
                 return $query;
               }
@@ -57,10 +58,23 @@
                 $resultado = mysqli_query($this->db, $sql);
                 $res = mysqli_fetch_array($resultado);
                 if (!empty($res)) {
-                  return true;
+                  if (password_verify($this->contrasena,$res['contrasenia'])) {
+                    $id_duenio = $res['id_duenio'];
+                    $_SESSION['id_duenio'] = $id_duenio;
+                    $sql2 = "SELECT id FROM t_negocio WHERE id_duenio = '$id_duenio'";
+                    $resultado2 = mysqli_query($this->db,$sql2);
+                    $res2 = mysqli_fetch_array($resultado2);
+                    $_SESSION['id_negocio'] = $res2['id'];
+                    return true;
+                  }
                 } else {
                   return false;
                 }
+              }
+
+              public function cerrar () {
+                session_unset();
+                session_destroy();
               }
             }
 

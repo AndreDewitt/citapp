@@ -10,7 +10,11 @@
 
         public function mostrar () {
             $tablas = $this->model->mostrar();
-            require_once 'views/negocio/categorias.php';
+            if (isset($_SESSION['id_duenio']) && isset($_SESSION['id_negocio'])) {
+                require_once 'views/negocio/categorias.php';
+            } else {
+                header("Location: http://localhost/citapp/?controllers=duenioController&action=login");
+            }
         }
 
         public function eliminar () {

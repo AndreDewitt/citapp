@@ -22,11 +22,6 @@ require_once 'models/negocio/usuario.php';
         require_once 'views/negocio/login.php';
     }
 
-    function mostrar(){
-        $usuario = $this->model->mostrar('t_duenios');
-        require_once 'views/negocio/login.php';
-    }
-
    function crear() {
         $this->model->setNombres($_POST['nombreDuenio']);
         $this->model->setApaterno($_POST['apellidoP']);
