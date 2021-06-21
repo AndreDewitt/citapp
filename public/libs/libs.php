@@ -15,9 +15,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="shortcut icon" type="image/png" href="Logo-Pixki_16.png">
-<link rel="apple-touch-startup-image" href="Logo-Pixki_16.png">
-<link rel="apple-touch-icon" href="Logo-Pixki_16.png">
+<link rel="shortcut icon" type="image/png" href="logo-citapp_16.png">
+<link rel="apple-touch-startup-image" href="logo-citapp_16.png">
+<link rel="apple-touch-icon" href="logo-citapp_16.png">
 
-<link rel="manifest" href="manifest.json?1.2">
-<script src="script.js"></script>
+<link rel="manifest" href="manifest.json?1.3">
+<script src="script.js?1.1"></script>

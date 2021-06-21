@@ -3,12 +3,12 @@ urlsToCache = [
     './',
     'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap',
     'https://fonts.googleapis.com/icon?family=Material+Icons',
-    './Logo-Pixki_1024.png',
-    './Logo-Pixki_512.png',
-    './Logo-Pixki_128.png',
-    './Logo-Pixki_64.png',
-    './Logo-Pixki_32.png',
-    './Logo-Pixki_16.png'
+    './logo-citapp_1024.png',
+    './logo-citapp_512.png',
+    './logo-citapp_128.png',
+    './logo-citapp_64.png',
+    './logo-citapp_32.png',
+    './logo-citapp_16.png'
 ]
 
 self.addEventListener('install', e => {
