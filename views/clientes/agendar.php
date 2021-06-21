@@ -17,7 +17,6 @@
         <div class="negocios">
             <?php 
                 $iconos = ['restaurant','content_cut','health_and_safety'];
-                $titulo = ['Restaurante','Peluquería','Consultorios'];
                 $i = 0;
                 while ($categoria = $categorias->fetch_object()) : 
             ?>

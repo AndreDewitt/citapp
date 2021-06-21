@@ -131,15 +131,21 @@
                     <h2>00:00</h2>
                 </div>
             </div>
+            <?php while($cita = $tablas->fetch_object()):?>
             <div class="reserva">
                 <div class="informacion">
-                    <p>Nombre</p>
-                    <p>información</p>
+                    <p>Nombre: <?= $cita->nombre?></p>
+                    <p>Correo: <?= $cita->correo?></p>
+                    <p>Telefono: <?= $cita->tel?></p>
+                    <p>Fecha: <?= $cita->fecha?></p>
+                    <p>Servicio: <?= $cita->nombre_servicio?></p>
                 </div>
                 <div class="hora">
-                    <h2>00:00</h2>
+                    <h2><?=$cita->d?></h2>
+                    <h2><?=$cita->a?></h2>
                 </div>
             </div>
+            <?php endwhile;?>
             <div class="reserva cancelado">
                 <div class="informacion">
                     <p>Nombre</p>

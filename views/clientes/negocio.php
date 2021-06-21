@@ -32,7 +32,18 @@
                     <p><?=$informacion->descripcion?></p>
                 </div>
                 <div class="foto">
-                    <img style="max-width: 100%;" src="data:image/jpg;base64,<?php echo base64_encode($informacion->fotografia)?>" alt="" srcset="">
+                <?php
+                    $http = substr($informacion->fotografia, 0, -29);
+                    if ($http == "http") {
+                ?>
+                    <img style="max-width: 100%;" src="<?=$informacion->fotografia?>" alt="" srcset="">
+                <?php
+                    } else {
+                ?>        
+                    <img style="max-width: 100%;" src="data:image/jpg;base64,<?php echo base64_encode($informacion->fotografia)?>" alt="">
+                <?php
+                    }
+                ?>
                 </div>
             </div>
             <div class="titulo">
