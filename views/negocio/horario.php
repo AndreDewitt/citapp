@@ -17,12 +17,12 @@
                 </div>
             </header>
             <div class="row-con">
-                <div class="titulo row-con con-w12">
+                <div class="titulo row-con con-w12 justify-beetween">
                     <div class="con-w6 txt-left">
                         <h5>Horario de atención general</h5>
                     </div>
                     <div class="con-w6 txt-right">
-                        <button id="btn-atencion" class="btn-icon-self btn-atencion material-icons">add</button>
+                        <button id="btn-atencion" style="margin:;" class="btn-icon-self btn btn-azul btn-atencion material-icons">add</button>
                     </div>
                 </div>
                 <div class="row-con con-w12 dia_hora">
@@ -30,12 +30,12 @@
                     <?php $atencion = $turno->fetch_object() ?>
                     <p> <?=' '.$atencion->hora_apertura.' '?> </p> - <p> <?=' '.$atencion->hora_cierre.' '?></p>
                 </div>
-                <div class="titulo row-con con-w12">
+                <div class="titulo row-con con-w12 justify-beetween">
                     <div class="con-w6 txt-left">
                         <h5>Horarios registrados por servicio</h5>
                     </div>
                     <div class="con-w6 txt-right">
-                        <button id="btn-agregar-servicio" class="btn-icon-self btn-agregar-servicio material-icons">add</button>
+                        <button id="btn-agregar-servicio" style="margin:;" class="btn-icon-self btn btn-azul  btn-agregar-servicio material-icons">add</button>
                     </div>
                 </div>
                 <?php 
@@ -43,16 +43,16 @@
                         $tablas = $this->model->buscarPor('t_horario','id_servicio',$servicio->id);
                         while ($horario = $tablas->fetch_object()):
                 ?>
-                            <div class="row-con con-round con-w12 dia_hora align-beetween" style="margin:0px 0px 15px 0px;padding: 15px;background-color: var(--fondo-tarjeta);">
-                                <div class="dia con-w3">
+                            <div class="row-con con-round con-w12 bg-aux con  dia_hora align-beetween" style="margin:0px 0px 15px 0px;">
+                                <div class="dia con-w5">
                                     <p class="con-w12"><?=$horario->dia?></p>
                                     <p>Disponibilidad: <?=$horario->disponibilidad?></p>
                                 </div>
                                 <div class="hora con-w5">
                                     <p>Horas disponible: <?=$horario->d?></p> - <p><?=$horario->a?></p>
                                 </div>
-                                <div class="opciones con-w4 txt-center">
-                                    <button class="btn btn-rojo-hover">Eliminar</button>
+                                <div class="opciones con-w3 justify-right">
+                                    <button class="btn btn-rojo">Eliminar</button>
                                 </div>
                             </div>
                 <?php 
@@ -60,7 +60,7 @@
                     endwhile;
                 ?>
                 <div class="modal modal-ocultar">
-                    <div class="con-w9">
+                    <div class="con-w7">
                         <form action="http://localhost/citapp/?controllers=horarioController&action=insertar" method="POST">
                             <div class="titulo con-w12 txt-center">
                                 <h3>Horario de atención por servicio</h3>
@@ -71,9 +71,9 @@
                                 </div>
                                 <div class="nombre">
                                     <label for="nombre">Nombre del servicio</label>
-                                    <input class="form-control" type="text" name="nombre" id="nombre">
+                                    <input class="form-control"style="background-color: var(--fondo-principal);" type="text" name="nombre" id="nombre">
                                     <label for="descripcion">Descripción</label>
-                                    <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+                                    <textarea class="form-control"style="background-color: var(--fondo-principal);" name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
                                 </div>
                             </section>
                             <section class="dias_atencion con-w12">
@@ -107,27 +107,27 @@
                                 </div>
                             </section>
                             <div class="opciones con-w12">
-                                <button class="btn ">Confirmar</button>
-                                <label id="btn-agregar-cancelar" class="btn btn-rojo-hover btn-cerrar">Cancelar</label>
+                                <button class="btn btn-azul">Confirmar</button>
+                                <label id="btn-agregar-cancelar" class="btn btn-rojo btn-cerrar">Cancelar</label>
                             </div>
                         </form>
                     </div>
                 </div>
 
                 <div class="modal modal-ocultar">
-                    <div class="con-w9">
+                    <div class="con-w9 justify-center">
                         <form action="http://localhost/citapp/?controllers=horarioController&action=ingresarAtencion" method="POST">
-                            <div class="titulo con-w12 txt-center">
+                            <div class="con-w12 txt-center">
                                 <h3>Horario de atención por servicio</h3>
                             </div>
-                            <section class="servicios con-w12">
+                            <section class="servicios con-w8">
                                 <label for="hora_apertura">Horario de Apertura</label>
-                                <input class="form-control" type="time" name="hora_apertura" id="hora_apertura">
+                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_apertura" id="hora_apertura">
                                 <label for="hora_cierre">Horario de Cierre</label>
-                                <input class="form-control" type="time" name="hora_cierre" id="hora_cierre">
+                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_cierre" id="hora_cierre">
                                 <div class="opciones">
-                                    <button class="btn">Ingresar</button>
-                                    <label id="btn-atencion-cancelar" class="btn btn-rojo-hover btn-cerrar">Cancelar</label>
+                                    <button class="btn btn-azul">Ingresar</button>
+                                    <label id="btn-atencion-cancelar" class="btn btn-rojo btn-cerrar">Cancelar</label>
                                 </div>
                             </section>
                         </form>

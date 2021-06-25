@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'models/negocio/Duenio.php';
+require_once 'models/negocio/duenio.php';
 require_once 'models/negocio/negocio.php';
 require_once 'models/negocio/contacto.php';
 require_once 'models/negocio/usuario.php';

@@ -12,48 +12,48 @@ body .informacion .opciones {
 body .informacion .opciones .servicio {
     display: flex;
     align-items: center;
-    color: var(--texto);
+    color: var(--color-texto);
 }
 
-body .informacion .opciones .servicio i {
+.contenedor .informacion .opciones .servicio i {
     padding: 0px 15px 0px 0px;
 }
 
-body .informacion .negocio {
+.contenedor .informacion .negocio {
     width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
 
-body .informacion .negocio .titulo {
+.contenedor .negocio .titulo {
     display: flex;
     width: 100%;
 }
 
-body .informacion .negocio .titulo i {
-    padding: 0px 15px 0px 0px;
+.contenedor .negocio .titulo i {
+    padding: 0px 20px 0px 0px;
     color: var(--texto);
 }
 
-body .informacion .negocio .descripcion,
-body .informacion .negocio .ubicacion {
+.contenedor .negocio .descripcion,
+.contenedor .negocio .ubicacion {
     width: 100%;
     display: flex;
 }
 
-body .informacion .negocio .descripcion .info,
-body .informacion .negocio .ubicacion .direccion {
+.contenedor .negocio .descripcion .info,
+.contenedor .negocio .ubicacion .direccion {
     width: 60%;
     line-height: 1.6em;
     padding: 0px 30px 0px 0px;
 }
 
-body .informacion .negocio .descripcion .foto,
-body .informacion .negocio .ubicacion .mapa {
+.contenedor .negocio .descripcion .foto,
+.contenedor .negocio .ubicacion .mapa {
     width: 40%;
-    background-color: var(--fondo-tarjeta);
-    border-radius: var(--border-radius);
+    background-color: var(--fondo-principal);
+    border-radius: var(--radius);
 }
 
 @media screen and (max-width: 768px) {
@@ -61,19 +61,24 @@ body .informacion .negocio .ubicacion .mapa {
         width: 90%;
     }
 
-    body .informacion .negocio .descripcion .info,
-    body .informacion .negocio .ubicacion .direccion {
+    body .negocio .descripcion .info,
+    body .negocio .ubicacion .direccion {
         width: 100%;
     }
 
-    body .informacion .negocio .descripcion,
-    body .informacion .negocio .ubicacion {
+    body .negocio .descripcion,
+    body .negocio .ubicacion {
         flex-wrap: wrap;
     }
 
-    body .informacion .negocio .descripcion .foto,
-    body .informacion .negocio .ubicacion .mapa {
+    body .negocio .descripcion .foto,
+    body .negocio .ubicacion .mapa {
         width: 100%;
         margin: 20px 0px;
+    }
+
+    body .contenedor .row-con .titulo .con-w5 {
+        min-width: 100%;
+        justify-content: center;
     }
 }

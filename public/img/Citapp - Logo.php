@@ -2,11 +2,11 @@
                 <defs>
                     <style>
                         .cls-1 {
-                            fill: var(--texto);
+                            fill: var(--color-texto);
                         }
             
                         .cls-2 {
-                            fill: var(--azul);
+                            fill: var(--color-azul);
                         }
                     </style>
                 </defs>

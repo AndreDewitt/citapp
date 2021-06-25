@@ -8,7 +8,10 @@ urlsToCache = [
     './logo-citapp_128.png',
     './logo-citapp_64.png',
     './logo-citapp_32.png',
-    './logo-citapp_16.png'
+    './logo-citapp_16.png',
+    './index.php',
+    './bienvenida.php',
+    './autoload.php'
 ]
 
 self.addEventListener('install', e => {

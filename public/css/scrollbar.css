@@ -3,16 +3,16 @@
   height: 8px;}
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: var(--azul) }
+  background-color: var(--color-azul) }
 
 *::-webkit-scrollbar-track {
-  background: var(--fondo-principal);
+  background: var(--fondo-auxiliar);
   border-radius: 50px;}
 
 *::-webkit-scrollbar-track:hover,
 *::-webkit-scrollbar-track:active {
-  background: var(--fondo-principal);}
+  background: var(--fondo-auxiliar);}
 
 *::-webkit-scrollbar-thumb {
-  background: var(--fondo-tarjeta);  
+  background: var(--fondo-principal);  
   border-radius: 3px;}

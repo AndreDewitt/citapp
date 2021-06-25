@@ -10,10 +10,11 @@
 
 .menu {
     width: 120px;
+    min-height: 100vh;
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: var(--fondo-auxiliar);
+    background-color: var(--fondo-principal);
 }
 
 .menu nav h5 {
@@ -28,6 +29,10 @@
     padding: 15px;
     text-decoration: none;
     font-size: 30px;
+}
+
+.menu nav a:hover {
+    color: var(--color-azul);
 }
 
 @media screen and (max-width: 768px) {

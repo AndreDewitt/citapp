@@ -18,11 +18,9 @@
             </header>
             <div class="contenedor">
                 <section class="row-con">
-                    <div class="con con-w12">
-                        <div class="row-con con-w12 txt-left">
-                            <div class="con-w12">
-                                <h4>Información del negocio</h4>
-                            </div>
+                    <div class="row-con con con-w12 txt-left">
+                        <div class="con-w12">
+                            <h4>Información del negocio</h4>
                         </div>
                     </div>
                     <div class="descripcion con con-w12">
@@ -33,48 +31,42 @@
                             <h5>Nombre del dueño: <?=$duenio->nombre?></h5>
                         </div>
                     </div>
-                    <div class="con con-w12">
-                        <div class="titulo row-con con-w12 txt-left">
-                            <div class="con-w7">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="opciones row-con con-w5 align-right">
-                                <button class="btn-icon btn-desc">
-                                    <i class="material-icons">edit</i>
-                                    Editar descripción y fotografias
-                                </button>
-                            </div>    
+                    <div class="titulo row-con con con-w12 txt-left">
+                        <div class="con-w7">
+                            <h4>Descripción</h4>
                         </div>
+                        <div class="opciones row-con con-w5 justify-right">
+                            <button class="btn btn-icon btn-azul btn-desc">
+                                <i class="material-icons">edit</i>
+                                Editar descripción y fotografia
+                            </button>
+                        </div>    
                     </div>
                     <div class="descripcion con con-w12">
                         <div class="info">
                             <p><?=$negocio->descripcion?></p>
                         </div>
                     </div>
-                    <div class="con con-w12">
-                        <div class="titulo row-con con-w12 txt-left">
-                            <div class="con-w7">
-                                <h4>Fotografía</h4>
-                            </div>    
-                        </div>
+                    <div class="titulo row-con con con-w12 txt-left">
+                        <div class="con-w7">
+                            <h4>Fotografía</h4>
+                        </div>    
                     </div>
                     <div class="fotos con con-w12">
                         <div class="con-w4">
-                            <img src="data:image/jpg;base64,<?php echo base64_encode($negocio->fotografia)?>" alt="">
+                            <img style="max-width: 100%;" src="data:image/jpg;base64,<?php echo base64_encode($negocio->fotografia)?>" alt="">
                         </div>
                     </div>
-                    <div class="titulo con con-w12">
-                        <div class="titulo row-con con-w12 txt-left">
-                            <div class="con-w7">
-                                <h4>Ubicación</h4>
-                            </div>
-                            <div class="opciones row-con con-w5 align-right">
-                                <button class="btn-icon btn-ubicacion">
-                                    <i class="material-icons">location_on</i>
-                                    Editar dirección
-                                </button>
-                            </div>    
+                    <div class="titulo con row-con con-w12 txt-left">
+                        <div class="con-w7">
+                            <h4>Ubicación</h4>
                         </div>
+                        <div class="opciones row-con con-w5 justify-right">
+                            <button class="btn btn-icon btn-azul btn-ubicacion">
+                                <i class="material-icons">location_on</i>
+                                Editar dirección
+                            </button>
+                        </div>    
                     </div>
                     <div class="con con-w12">
                         <div class="info">

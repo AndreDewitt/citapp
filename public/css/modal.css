@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: var(--fondo-principal-transparente);
+    background-color: var(--fondo-auxiliar);
     visibility: visible;
     opacity: 1;
 }
@@ -26,7 +26,7 @@
 .modal form {
     width: 70%;
     max-height: 70vh;
-    padding: 10px 10px 100px 10px;
+    padding: 10px 10px 20px 10px;
     margin: auto;
     display: flex;
     justify-content: flex-start;
@@ -58,11 +58,11 @@
 
 .modal form .pag-1 .seleccion select {
     width: 100%;
-    background-color: var(--fondo-tarjeta);
+    background-color: var(--fondo-principal);
     border: 2px solid transparent;
     padding: 10px;
-    border-radius: var(--border-radius);
-    color: var(--texto);
+    border-radius: var(--radius);
+    color: var(--color-texto);
 }
 
 .modal form .pag-1 .seleccion select:focus {
@@ -94,8 +94,8 @@
     display: flex;
     justify-content: space-between;
     padding: 15px 15px 15px 60px;
-    border-radius: var(--border-radius);
-    background-color: var(--fondo-tarjeta);
+    border-radius: var(--radius);
+    background-color: var(--fondo-principal);
     margin: 0px 0px 15px 0px;
 }
 
@@ -112,8 +112,8 @@
     border-radius: 50%;
     left: -40px;
     top: calc(50% - 10px);
-    border: 2px solid var(--fondo-principal);
-    background-color: var(--fondo-tarjeta);
+    border: 2px solid var(--fondo-auxiliar);
+    background-color: var(--fondo-principal);
 }
 
 .modal form .pag-1 .t_horario .dia_hora .dia input[type="radio"] {
@@ -121,8 +121,8 @@
 }
 
 .modal form .pag-1 .t_horario .dia_hora .dia input[type="radio"]:checked + label::after {
-    border: 2px solid var(--azul);
-    background-color: var(--azul);
+    border: 2px solid var(--color-azul);
+    background-color: var(--color-azul);
 }
 
 .modal form .pag-2 {

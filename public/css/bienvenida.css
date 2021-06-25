@@ -7,6 +7,10 @@
     padding: 0px 0px 30px 0px;
 }
 
+.bienvenida .logo {
+    width: 60%;
+}
+
 .bienvenida .con {
     width: 300px;
 }
@@ -19,6 +23,11 @@
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
+}
+
+.bienvenida .con a:hover h5,
+.bienvenida .con a:hover .icono i {
+    color: white;
 }
 
 .bienvenida .con a .icono,
@@ -34,6 +43,7 @@
 
 .bienvenida .con a .icono i {
     font-size: 100px;
+    color: var(--color-texto);
 }
 
 .bienvenida .con a .texto p {
@@ -51,9 +61,13 @@
     }
 
     .bienvenida .logo svg {
-        width: 60%;
+        width: 85%;
         margin: auto;
         display: flex;
+    }
+
+    .bienvenida .con {
+        min-width: 80%;
     }
 
     .bienvenida .con a {

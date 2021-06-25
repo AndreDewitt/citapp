@@ -54,12 +54,8 @@ body .login .iniciar-sesion .contenedor form .opciones a {
     text-decoration: none;
     text-align: center;
     padding: 10px;
-    background-color: transparent;
     border: none;
-}
-
-body .login .iniciar-sesion .contenedor form .opciones a:hover {
-    background-color: var(--fondo-tarjeta);
+    background-color: var(--fondo-principal);
 }
 
 body .login .iniciar-sesion .contenedor form .opciones button,
@@ -75,8 +71,6 @@ body .login .registrarse {
     max-height: 100vh;
     overflow: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     opacity: 1;
 }
 
@@ -86,6 +80,20 @@ body .login .ocultar {
     opacity: 0;
     visibility:hidden;
     overflow: hidden;
+}
+
+@media screen and (max-width: 1366px) {
+    body .login .iniciar-sesion .contenedor form {
+        width: 70%;
+    }
+
+    body .login .registrarse .con-w8 {
+        width: 80%;
+    }
+
+    body .login .registrarse .contenedor form {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -117,6 +125,6 @@ body .login .ocultar {
     }
 
     body .login .iniciar-sesion .contenedor form {
-        width: 100%;
+        width: 70%;
     }
 }

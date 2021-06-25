@@ -5,52 +5,54 @@
     <title>Información del negocio</title>
 </head>
 <body>
-    <header class="titulo">
-        <div class="logo">
-            <?php require_once 'public/img/Citapp - Logo.php'; ?>
-        </div>
-    </header>
-    <section class="informacion">
-        <div class="opciones">
-            <div class="servicio">
-                <a href="http://localhost/citapp/?controllers=agendarController&action=mostrar">
-                    <i class="material-icons">arrow_back</i>
-                </a>
-                <h5><?=$categoria->nombre?></h5>
+    <div class="contenedor">
+        <header class="row-con titulo">
+            <div class="logo">
+                <?php require_once 'public/img/Citapp - Logo.php' ?>
             </div>
-            <div class="btn">
-                <label class="btn_agendar material-icons">event</label>
+        </header>
+        <div class="informacion row-con align-center">
+            <div class="opciones">
+                <div class="servicio">
+                    <a href="http://localhost/citapp/?controllers=agendarController&action=mostrar">
+                        <i class="material-icons">arrow_back</i>
+                    </a>
+                    <h5><?=$categoria->nombre?></h5>
+                </div>
+                <div>
+                    <label class="btn btn-icon-self btn-azul btn_agendar material-icons">event</label>
+                </div>
             </div>
         </div>
-        <div class="negocio">
-            <div class="titulo">
+        <div class="negocio row-con">
+            <div class="titulo row-con con-w12 align-center">
                 <i class="material-icons">restaurant</i>
-                <h5><?=$informacion->nombre?></h5>
+                <h5 class="con-w5"><?=$informacion->nombre?></h5>
             </div>
-            <div class="descripcion">
+            <div class="descripcion row-con con-w12 justify-beetween">
                 <div class="info">
                     <p><?=$informacion->descripcion?></p>
                 </div>
                 <div class="foto">
-                <?php
-                    $http = substr($informacion->fotografia, 0, -29);
-                    if ($http == "http") {
-                ?>
-                    <img style="max-width: 100%;" src="<?=$informacion->fotografia?>" alt="" srcset="">
-                <?php
-                    } else {
-                ?>        
-                    <img style="max-width: 100%;" src="data:image/jpg;base64,<?php echo base64_encode($informacion->fotografia)?>" alt="">
-                <?php
-                    }
-                ?>
+                    <?php
+                        $http = substr($informacion->fotografia, 0, -29);
+                        if ($http == "http") {
+                    ?>
+                        <img style="max-width: 100%;" src="<?=$informacion->fotografia?>" alt="" srcset="">
+                    <?php
+                        } else {
+                    ?>        
+                        <img style="max-width: 100%;" src="data:image/jpg;base64,<?php echo base64_encode($informacion->fotografia)?>" alt="">
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
-            <div class="titulo">
+            <div class="titulo row-con con-w12 align-center">
                 <i class="material-icons">location_on</i>
-                <h5>Ubicación</h5>
+                <h5 class="con-w5">Ubicación</h5>
             </div>
-            <div class="ubicacion">
+            <div class="ubicacion row-con con-w12 justify-beetween">
                 <div class="direccion">
                     <p>Calle <?=$ubicacion->calle?>, Num. Interior <?=$ubicacion->num_int?>, Num. Exterior <?=$ubicacion->num_ext?>, Colonia <?=$ubicacion->colonia?>, Código Postal <?=$ubicacion->cp?>, Alcaldía <?=$ubicacion->alcaldia?>, Ciudad <?=$ubicacion->ciudad?>.</p>
                 </div>
@@ -59,7 +61,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <?php require_once 'views/clientes/modulos/form-agendar.php' ?>
     <script src="public/js/fetch-api.js?1.3"></script>
     <script src="public/js/form-agendar.js?1.1"></script>

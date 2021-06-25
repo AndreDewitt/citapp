@@ -1,6 +1,6 @@
 <div id="modal" class="modal modal-ocultar">
     <div class="contenedor-modal">
-        <div class="titulo">
+        <div class="titulo txt-center">
             <h4 id="h1_nombre_negocio"></h4>
         </div>
         <form id="agendar-cita">
@@ -29,10 +29,10 @@
                 <input class="form-control" type="number" name="aux" id="aux"  hidden="">
             </div>
             <div class="opciones">
-                <span class="btn btn-anterior btn-oculto">Anterior</span>
-                <span class="btn btn-siguiente ">Siguiente</span>
-                <button class="btn btn-finalizar btn-oculto">Finalizar</button>
-                <span class="btn btn-cerrar">Cancelar</span>
+                <span class="btn btn-azul btn-anterior btn-oculto">Anterior</span>
+                <span class="btn btn-azul btn-siguiente ">Siguiente</span>
+                <button class="btn btn-verde btn-finalizar btn-oculto">Finalizar</button>
+                <span class="btn btn-rojo btn-cerrar">Cancelar</span>
             </div>
         </form>
     </div>

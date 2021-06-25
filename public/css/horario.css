@@ -14,10 +14,11 @@
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 50px;
+    color: var(--color-texto);
 }
 
 .modal form .dias_atencion label:hover {
-    background-color: var(--fondo-tarjeta);
+    background-color: var(--fondo-principal);
 }
 
 .modal form .dias_atencion label:not(:last-child) {
@@ -29,7 +30,8 @@
 }
 
 .modal form .dias_atencion input[type="checkbox"]:checked + label {
-    background-color: var(--azul);
+    color: white;
+    background-color: var(--color-azul);
 }
 
 .contenedor .dia_hora .opciones {
@@ -38,7 +40,7 @@
 
 @media screen and (max-width: 768px) {
     .modal form {
-        width: 100%;
+        width: 95%;
     }
 
     .modal form .opciones {
@@ -47,5 +49,10 @@
 
     .modal form .opciones input {
         width: 100%;
+    }
+
+    .contenedor .dia_hora .opciones {
+        min-width: 100%;
+        justify-content: flex-end;
     }
 }
