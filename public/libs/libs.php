@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="public/css/consumidor-filtrar.css?1.6">
 <link rel="stylesheet" href="public/css/consumidor-informacion.css?1.2">
 <link rel="stylesheet" href="public/css/horario.css?1.8">
-<link rel="stylesheet" href="public/css/menu.css?1.5">
+<link rel="stylesheet" href="public/css/menu.css?1.6">
 <link rel="stylesheet" href="public/css/cita.css">
-<link rel="stylesheet" href="public/css/login.css?2.6">
+<link rel="stylesheet" href="public/css/login.css?2.8">
 <link rel="stylesheet" href="public/css/scrollbar.css?1.1">
 <link rel="stylesheet" href="public/css/framework-2.0.css?1.2">
 <link rel="preconnect" href="https://fonts.gstatic.com">

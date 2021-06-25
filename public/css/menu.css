@@ -3,7 +3,7 @@
     position: fixed;
     top: -100px;
     left: -100px;
-    z-index: 9999999;
+    z-index: 99999999999999;
     padding: 15px;
     cursor: pointer;
 }
@@ -41,7 +41,7 @@
         position: fixed;
         top: 15px;
         left: 15px;
-        z-index: 9999999;
+        z-index: 99999999999999;
         padding: 15px;
         cursor: pointer;
     }
@@ -53,6 +53,7 @@
         justify-content: center;
         background-color: var(--fondo-auxiliar);
         position: fixed;
+        z-index: 9999999999999;
     }
 
     .mostrar {

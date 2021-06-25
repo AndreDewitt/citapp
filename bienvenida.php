@@ -3,7 +3,7 @@
 <head>
     <title>Bienvenida</title>
     <?php require_once 'public/libs/libs.php' ?>
-    <link rel="stylesheet" href="public/css/bienvenida.css?1.3">
+    <link rel="stylesheet" href="public/css/bienvenida.css?1.4">
 </head>
 <body>
     <div class="contenedor bienvenida">
@@ -12,7 +12,7 @@
                 <?php require_once 'public/img/Citapp - Logo.php' ?>
             </div>
         </div>
-        <div class="row-con justify-center">
+        <div class="row-con justify-center align-center">
             <div class="con con-w5">
                 <a class="btn bg-aux btn-azul-hover" href="http://localhost/citapp/?controllers=agendarController&action=mostrar">
                     <div class="icono">
