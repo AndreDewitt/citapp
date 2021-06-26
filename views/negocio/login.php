@@ -88,7 +88,7 @@
                                 <label for="password">Contraseña: </label>
                                 <input class="form-control" type="password" name="password" id="password">
                             </div>
-                            <div class="row-con con-w11 opciones">
+                            <div class="row-con con con-w11">
                                 <button class="btn  btn-azul">Continuar</button>
                                 <a class="btn btn-rojo btn_registro">Cancelar</a>
                             </div>
