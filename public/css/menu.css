@@ -1,15 +1,12 @@
 .icono-menu {
     display: none;
+    visibility: hidden;
     position: fixed;
-    top: -100px;
-    left: -100px;
-    z-index: 99999999999999;
-    padding: 15px;
-    cursor: pointer;
+    top: 30px;
+    left: 30px;
 }
 
 .menu {
-    width: 120px;
     min-height: 100vh;
     height: 100%;
     display: flex;
@@ -17,8 +14,13 @@
     background-color: var(--fondo-principal);
 }
 
+.menu nav {
+    width: 90%;
+}
+
 .menu nav h5 {
-    padding: 30px 0px;
+    text-align: center;
+    padding: 50px 0px;
 }
 
 .menu nav ul {
@@ -26,22 +28,25 @@
 }
 
 .menu nav a {
-    padding: 15px;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
+
+.menu nav a i {
+    padding: 15px;
     font-size: 30px;
 }
 
-.menu nav a:hover {
+.menu nav a:hover,
+.menu nav a:hover i {
     color: var(--color-azul);
 }
 
 @media screen and (max-width: 768px) {
     .icono-menu {
-        display: block;
-        position: fixed;
-        top: 30px;
-        left: 30px;
-        z-index: 99999999999999;
+        visibility: visible;
+        z-index: 999999999999999;
         padding: 15px;
         cursor: pointer;
         background-color: var(--fondo-principal);
@@ -52,9 +57,10 @@
         overflow: hidden;
         display: none;
         justify-content: center;
-        background-color: var(--fondo-auxiliar);
         position: fixed;
         z-index: 9999999999999;
+        opacity: 0;
+        transition: all .3s;
     }
 
     .mostrar {
@@ -62,5 +68,6 @@
         height: 100%;
         display: flex;
         justify-content: center;
+        opacity: 1;
     }
 }

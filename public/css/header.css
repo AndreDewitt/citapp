@@ -13,3 +13,10 @@ header .logo {
 header .logo svg {
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    header .logo {
+        padding: 15px 0px 0px 0px;
+        width: 150px;
+    }
+}

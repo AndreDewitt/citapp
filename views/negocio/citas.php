@@ -7,10 +7,10 @@
 <body>
     <i id="icono" class="btn btn-icon-self material-icons icono-menu ">menu</i>
     <div class="contenedor">
-        <div class="con-w2">
+        <div class="con-w3">
             <?php require_once 'views/negocio/modulos/menu.php' ?>
         </div>
-        <div class="con-w11">
+        <div class="con-w10">
             <header class="titulo">
                 <div class="logo">
                     <?php require_once 'public/img/Citapp - Logo.php' ?>
