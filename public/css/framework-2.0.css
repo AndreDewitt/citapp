@@ -24,6 +24,7 @@ body {
     --color-amarillo-03: rgba(237, 179, 3,0.3);
     --color-verde-03: rgba(49, 158, 79,0.3);
     --color-azul-03: rgba(45, 159, 252,0.3);
+    --focus: rgba(45, 159, 252,0.3);
 }
 
 /* 
@@ -36,8 +37,6 @@ body {
         --fondo-auxiliar: #323640;
         --fondo-auxiliar-03: rgba(32, 32, 32, 0.3);
 
-        --focus: rgba(242, 242, 242, 0.3);
-        
         --color-texto: rgb(242, 242, 242);
 
         --border: 1px solid rgba(242, 242, 242, 0.3);
@@ -53,7 +52,6 @@ body {
         --fondo-principal: #FFFFFF;
         --fondo-auxiliar: #F7F7F7;
         --fondo-auxiliar-03: rgba(0, 0, 0, 0.137);
-        --focus: rgba(105, 105, 105, 0.3);
         --color-texto: rgb(36, 36, 36);
         
         --border: 1px solid rgba(0,0,0,0.3);
@@ -282,7 +280,6 @@ h6 {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: rgba(242, 242, 242, 0.3);
     margin: 15px 15px 15px 0px;
 }
 
@@ -394,6 +391,7 @@ label {
 }
 
 .form-control:focus {
+    border: 1px solid var(--color-azul);
     outline: none;
     background-color: var(--fondo-auxiliar);
     box-shadow: 0px 0px 0px 3px var(--focus);

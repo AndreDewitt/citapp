@@ -1,4 +1,4 @@
-<?php 
+<?php
    require_once 'autoload.php';
 
    if (isset($_GET['controllers']) && class_exists($_GET['controllers'])){
@@ -11,5 +11,7 @@
          echo 'No se ecuentra el metodo';
       }
    } else {
-      header("Location: http://localhost/citapp/bienvenida.php");
+      // header("Location: http://localhost/citapp/bienvenida.php");
+      echo "<script>window.location.href = 'http://localhost/citapp/bienvenida.php'</script>";
    }
+?>

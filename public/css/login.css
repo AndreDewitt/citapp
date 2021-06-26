@@ -43,6 +43,11 @@ body .login .iniciar-sesion .contenedor form input {
     margin: 0px 0px 15px 0px;
 }
 
+body .login .iniciar-sesion .contenedor form input,
+body .login .registrarse .contenedor form input {
+    background-color: var(--fondo-principal);
+}
+
 body .login .iniciar-sesion .contenedor form .opciones {
     width: 100%;
     display: flex;
@@ -55,7 +60,12 @@ body .login .iniciar-sesion .contenedor form .opciones a {
     text-align: center;
     padding: 10px;
     border: none;
+    background-color: var(--fondo-auxiliar);
+}
+
+body .login .iniciar-sesion .contenedor form .opciones .btn-azul-hover:hover {
     background-color: var(--fondo-principal);
+    color: var(--color-texto);
 }
 
 body .login .iniciar-sesion .contenedor form .opciones button,
@@ -67,11 +77,14 @@ body .login .iniciar-sesion .contenedor form .opciones a {
 }
 
 body .login .registrarse {
-    /* width: 40%; */
     max-height: 100vh;
     overflow: auto;
     display: flex;
     opacity: 1;
+}
+
+body .login .registrarse .contenedor form .con .row-con {
+    margin: 0;
 }
 
 body .login .ocultar {

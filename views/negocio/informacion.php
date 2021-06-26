@@ -103,8 +103,8 @@
                             <input class="form-control" type="text" name="descripcion" id="descripcion">
                             <label for="fotografias">Fotografías</label>
                             <input class="form-control" type="file" name="fotografias" id="fotografias">
-                            <button class="btn">Guardar</button>
-                            <label class="btn btn-cancelar btn-rojo-hover">Cancelar</label>
+                            <button class="btn btn-azul">Guardar</button>
+                            <label class="btn btn-cancelar btn-rojo">Cancelar</label>
                         </form>
                     </div>
                 </div>
@@ -130,8 +130,8 @@
                             <input class="form-control" type="text" name="alcaldia" id="alcaldia">
                             <label for="ciudad">Ciudad</label>
                             <input class="form-control" type="text" name="ciudad" id="ciudad">
-                            <button class="btn">Guardar</button>
-                            <label class="btn btn-cancelar btn-rojo-hover">Cancelar</label>
+                            <button class="btn btn-azul">Guardar</button>
+                            <label class="btn btn-cancelar btn-rojo">Cancelar</label>
                         </form>
                     </div>
                 </div>

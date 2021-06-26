@@ -13,10 +13,10 @@
 
         $resultado = $this->model->insertarUsuario();
         if ($resultado) {
-        header("Location: http://localhost/citapp/?controllers=usuarioController&action=mostrar");
+            header("Location: http://localhost/citapp/?controllers=usuarioController&action=mostrar");
         } else{
-         echo "la mama del mono";
-     }
+            echo "la mama del mono";
+        }
     }
 
     public function inicio(){

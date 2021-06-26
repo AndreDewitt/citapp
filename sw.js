@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cache_citapp_v1',
+const CACHE_NAME = 'cache_citapp_v4',
 urlsToCache = [
     './',
     'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap',
@@ -9,9 +9,17 @@ urlsToCache = [
     './logo-citapp_64.png',
     './logo-citapp_32.png',
     './logo-citapp_16.png',
-    './index.php',
-    './bienvenida.php',
-    './autoload.php'
+    './public/css/modal.css',
+    './public/css/header.css',
+    './public/css/consumidor-filtrar.css',
+    './public/css/consumidor-informacion.css',
+    './public/css/horario.css',
+    './public/css/menu.css',
+    './public/css/cita.css',
+    './public/css/login.css',
+    './public/css/scrollbar.css',
+    './public/css/framework-2.0.css',
+    './bienvenida.php'
 ]
 
 self.addEventListener('install', e => {

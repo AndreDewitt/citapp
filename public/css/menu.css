@@ -39,11 +39,12 @@
     .icono-menu {
         display: block;
         position: fixed;
-        top: 15px;
-        left: 15px;
+        top: 30px;
+        left: 30px;
         z-index: 99999999999999;
         padding: 15px;
         cursor: pointer;
+        background-color: var(--fondo-principal);
     }
 
     .menu {
