@@ -117,19 +117,19 @@
                     <div class="con-w12">
                         <form action="http://localhost/citapp/?controllers=negocioController&action=crearU" method="post">
                             <label for="calle">Calle</label>
-                            <input class="form-control" type="text" name="calle" id="calle">
+                            <input class="form-control" type="text" name="calle" id="calle" required>
                             <label for="n_interior">N° interior</label>
-                            <input class="form-control" type="number" name="n_interior" id="n_interior">
+                            <input class="form-control" type="number" name="n_interior" id="n_interior" required>
                             <label for="n_exterior">N° exterior</label>
-                            <input class="form-control" type="number" name="n_exterior" id="n_exterior">
+                            <input class="form-control" type="number" name="n_exterior" id="n_exterior" required>
                             <label for="colonia">Colonia</label>
-                            <input class="form-control" type="text" name="colonia" id="colonia">
+                            <input class="form-control" type="text" name="colonia" id="colonia" required>
                             <label for="cp">C.P</label>
-                            <input class="form-control" type="number" name="cp" id="cp">
+                            <input class="form-control" type="number" name="cp" id="cp" required>
                             <label for="alcaldia">Alcaldia</label>
-                            <input class="form-control" type="text" name="alcaldia" id="alcaldia">
+                            <input class="form-control" type="text" name="alcaldia" id="alcaldia" required>
                             <label for="ciudad">Ciudad</label>
-                            <input class="form-control" type="text" name="ciudad" id="ciudad">
+                            <input class="form-control" type="text" name="ciudad" id="ciudad" required>
                             <button class="btn btn-azul">Guardar</button>
                             <label class="btn btn-cancelar btn-rojo">Cancelar</label>
                         </form>

@@ -18,9 +18,9 @@
                     <div class="con con-w12">
                         <form action="http://localhost/citapp/?controllers=usuarioController&action=inicio" method="POST" autocomplete="off">
                             <label for="nombre">Nombre de usuario: </label>
-                            <input class="form-control" type="text" name="nombre" id="nombre" autocomplete="off">
+                            <input class="form-control" type="text" name="nombre" id="nombre" autocomplete="off" required>
                             <label for="contrasenia">Contraseña: </label>
-                            <input class="form-control" type="password" name="contrasenia" id="contrasenia" >
+                            <input class="form-control" type="password" name="contrasenia" id="contrasenia" required>
                             <div class="opciones con-w12">
                                 <button class="btn btn-azul txt-center">Entrar</button>
                                 <a class="btn btn-azul-hover btn_registro txt-center">Registrarse</a>
