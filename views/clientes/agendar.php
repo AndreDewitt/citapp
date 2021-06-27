@@ -64,7 +64,7 @@
                 <div class="pag-1">
                     <div class="seleccion">
                         <h5>Selecciona un servicio</h5>
-                        <select name="select_servicios" id="select_servicios" class="select_servicios form-control">
+                        <select name="select_servicios" id="select_servicios" class="select_servicios form-control" required>
                             <option value="0">Selecciona un servicio</option>
                         </select>
                     </div>
@@ -78,11 +78,11 @@
                 </div>
                 <div class="pag-2 pag-ocultar">
                     <label for="nombre">Nombre completo</label>
-                    <input class="form-control" type="text" name="nombre" id="nombre">
+                    <input class="form-control" type="text" name="nombre" id="nombre" required>
                     <label for="correo">Correo electrónico</label>
-                    <input class="form-control" type="text" name="correo" id="correo">
+                    <input class="form-control" type="text" name="correo" id="correo" required>
                     <label for="tel">Número telefónico</label>
-                    <input class="form-control" type="text" name="tel" id="tel">
+                    <input class="form-control" type="text" name="tel" id="tel" required>
                     <input class="form-control" type="number" name="aux" id="aux"  hidden="">
                 </div>
                 <div class="opciones">

@@ -59,16 +59,19 @@ const render = (dia, id) => {
     select_de.setAttribute("id","d_" + id);
     select_de.setAttribute("name","d_" + id);
     select_de.setAttribute("type","time");
+    select_de.setAttribute("required","");
     select_de.classList.add("form-control");
     select_de.classList.add("con-w3");
     select_a.setAttribute("id","a_" + id);
     select_a.setAttribute("name","a_" + id);
     select_a.setAttribute("type","time");
+    select_a.setAttribute("required","");
     select_a.classList.add("form-control");
     select_a.classList.add("con-w3");
     select_di.setAttribute("id","di_" + id);
     select_di.setAttribute("name","di_" + id);
     select_di.setAttribute("type","number");
+    select_di.setAttribute("required","");
     select_di.classList.add("form-control");
     select_di.classList.add("con-w3");
 

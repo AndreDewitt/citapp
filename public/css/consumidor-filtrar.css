@@ -47,8 +47,14 @@
 }
 
 .agendar .negocios .negocio .icono i {
-    color: var(--color-texto);
+    color: var(--color-azul);
     font-size: 3em;
+}
+
+@media (prefers-color-scheme: dark) {
+    .agendar .negocios .negocio .icono i {
+        color: white;
+    }
 }
 
 .agendar .negocios .negocio .texto {

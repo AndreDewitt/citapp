@@ -21,6 +21,7 @@
             $categoria = $categorias->fetch_object();
             $ubicaciones = $this->model->buscarPor('t_ubicacion','id_negocio',$informacion->id);
             $ubicacion = $ubicaciones->fetch_object();
+            $servicios = $this->model->buscarPor('t_servicio','id_negocio',$informacion->id);
             require_once 'views/clientes/negocio.php';
         }
 

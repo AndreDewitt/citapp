@@ -20,7 +20,7 @@
                     <h5><?=$categoria->nombre?></h5>
                 </div>
                 <div>
-                    <label class="btn btn-icon-self btn-azul btn_agendar material-icons">event</label>
+                    <label class="btn btn-icon-self btn-azul btn_agendar material-icons" data-nombre="<?=$informacion->nombre?>">event</label>
                 </div>
             </div>
         </div>
@@ -62,7 +62,49 @@
             </div>
         </div>
     </div>
-    <?php require_once 'views/clientes/modulos/form-agendar.php' ?>
+    <div id="modal" class="modal modal-ocultar">
+        <div class="contenedor-modal">
+            <div class="titulo txt-center">
+                <h4 id="h1_nombre_negocio"></h4>
+            </div>
+            <form id="agendar-cita">
+                <div class="pag-1">
+                    <div class="seleccion">
+                        <h5>Selecciona un servicio</h5>
+                        <select name="select_servicios" id="select_servicios" class="select_servicios form-control" required>
+                            <option value="0">Selecciona un servicio</option>
+                            <?php while ($servicio = $servicios->fetch_object()) :?>
+                                <option value="<?=$servicio->id?>"><?=$servicio->nombre?></option>
+                            <?php endwhile; ?>
+                        </select>
+                    </div>
+                    <div class="fecha-hora">
+                        <div class="titulo">
+                            <h5>Selecciona la hora y fecha deseada</h5>
+                        </div>
+                        <div class="t_horario">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="pag-2 pag-ocultar">
+                    <label for="nombre">Nombre completo</label>
+                    <input class="form-control" type="text" name="nombre" id="nombre" required>
+                    <label for="correo">Correo electrónico</label>
+                    <input class="form-control" type="text" name="correo" id="correo" required>
+                    <label for="tel">Número telefónico</label>
+                    <input class="form-control" type="text" name="tel" id="tel" required>
+                    <input class="form-control" type="number" name="aux" id="aux"  hidden="">
+                </div>
+                <div class="opciones">
+                    <span class="btn btn-azul btn-anterior btn-oculto">Anterior</span>
+                    <span class="btn btn-azul btn-siguiente ">Siguiente</span>
+                    <button class="btn btn-azul-hover btn-finalizar btn-oculto">Finalizar</button>
+                    <span class="btn btn-rojo btn-cerrar" id="btn-cerrar-aux">Cancelar</span>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="public/js/fetch-api.js?1.3"></script>
     <script src="public/js/form-agendar.js?1.1"></script>
 </body>

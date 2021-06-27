@@ -100,9 +100,9 @@
                     <div class="con-w12">
                         <form action="http://localhost/citapp/?controllers=negocioController&action=actualizarDF" enctype="multipart/form-data"  method="post">
                             <label for="descripcion">Descripción</label>
-                            <input class="form-control" type="text" name="descripcion" id="descripcion">
+                            <input class="form-control" type="text" name="descripcion" id="descripcion" required>
                             <label for="fotografias">Fotografías</label>
-                            <input class="form-control" type="file" name="fotografias" id="fotografias">
+                            <input class="form-control" type="file" name="fotografias" id="fotografias" required>
                             <button class="btn btn-azul">Guardar</button>
                             <label class="btn btn-cancelar btn-rojo">Cancelar</label>
                         </form>

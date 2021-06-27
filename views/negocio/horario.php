@@ -71,9 +71,9 @@
                                 </div>
                                 <div class="nombre">
                                     <label for="nombre">Nombre del servicio</label>
-                                    <input class="form-control"style="background-color: var(--fondo-principal);" type="text" name="nombre" id="nombre">
+                                    <input class="form-control"style="background-color: var(--fondo-principal);" type="text" name="nombre" id="nombre" required>
                                     <label for="descripcion">Descripción</label>
-                                    <textarea class="form-control"style="background-color: var(--fondo-principal);" name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+                                    <textarea class="form-control"style="background-color: var(--fondo-principal);" name="descripcion" id="descripcion" cols="30" rows="10" required></textarea>
                                 </div>
                             </section>
                             <section class="dias_atencion con-w12">
@@ -122,9 +122,9 @@
                             </div>
                             <section class="servicios con-w8">
                                 <label for="hora_apertura">Horario de Apertura</label>
-                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_apertura" id="hora_apertura" required>
+                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_apertura" id="hora_apertura">
                                 <label for="hora_cierre">Horario de Cierre</label>
-                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_cierre" id="hora_cierre" required>
+                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_cierre" id="hora_cierre">
                                 <div class="opciones">
                                     <button class="btn btn-azul">Ingresar</button>
                                     <label id="btn-atencion-cancelar" class="btn btn-rojo btn-cerrar">Cancelar</label>
@@ -137,7 +137,7 @@
         </div>
     </div>
     
-    <script src="public/js/form-horario.js?1.2"></script>
+    <script src="public/js/form-horario.js?1.3"></script>
     <script src="public/js/menu.js"></script>
 </body>
 </html>

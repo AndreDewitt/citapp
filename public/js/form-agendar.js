@@ -20,6 +20,10 @@ const reset_pag1 = () => {
     btn_finalizar[0].classList.add('btn-oculto')
 };
 
+document.getElementById('btn-cerrar-aux').addEventListener('click', () => {
+    location.reload();
+});
+
 document.addEventListener('click', evt => {
     const c = evt.target.getAttribute("class")
     if (c === 'btn_agendar material-icons') {

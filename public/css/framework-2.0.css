@@ -50,7 +50,7 @@ body {
 @media (prefers-color-scheme: light) {
     :root {
         --fondo-principal: #FFFFFF;
-        --fondo-auxiliar: #F7F7F7;
+        --fondo-auxiliar: #F2F2F2;
         --fondo-auxiliar-03: rgba(0, 0, 0, 0.137);
         --color-texto: rgb(36, 36, 36);
         
