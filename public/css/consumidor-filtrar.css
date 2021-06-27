@@ -61,7 +61,7 @@
     width: 100%;
     color: var(--color-texto);
     text-align: center;
-    padding: 10px 0px;
+    padding: 10px 0px 0px 0px;
 }
 
 .busqueda{
@@ -93,6 +93,25 @@
     background-color: var(--fondo-principal);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    transition: all .3s;
+}
+
+.servicios .servicio:hover {
+    background-color: var(--color-azul);
+}
+
+.servicios .servicio:hover h5 {
+    color: white;
+}
+
+.servicios .servicio:hover .opciones a {
+    color: white;
+}
+
+.servicios .servicio:hover .opciones a:hover {
+    /* color: white; */
+    background-color: var(--fondo-principal);
 }
 
 .servicios .servicio h5 {
@@ -108,8 +127,9 @@
 
 .servicios .servicio .opciones a {
     text-decoration: none;
-    padding: 0px 10px;
+    padding: 10px 10px;
     cursor: pointer;
+    border-radius: var(--radius);
 }
 
 .servicios .servicio .opciones a:hover {

@@ -43,7 +43,7 @@
 
 .bienvenida .con a .icono i {
     font-size: 100px;
-    color: var(--color-texto);
+    color: var(--color-azul);
 }
 
 .bienvenida .con a .texto p {

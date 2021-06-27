@@ -61,24 +61,25 @@ body .informacion .opciones .servicio {
         width: 90%;
     }
 
-    body .negocio .descripcion .info,
-    body .negocio .ubicacion .direccion {
-        width: 100%;
-    }
-
     body .negocio .descripcion,
     body .negocio .ubicacion {
         flex-wrap: wrap;
     }
 
-    body .negocio .descripcion .foto,
-    body .negocio .ubicacion .mapa {
+    .contenedor .negocio .descripcion .info,
+    .contenedor .negocio .ubicacion .direccion {
+        width: 100%;
+    }
+
+
+    body .contenedor .negocio .descripcion .foto,
+    body .contenedor .negocio .ubicacion .mapa {
         width: 100%;
         margin: 20px 0px;
     }
 
     body .contenedor .row-con .titulo .con-w5 {
-        min-width: 100%;
+        min-width: 50%;
         justify-content: center;
     }
 }

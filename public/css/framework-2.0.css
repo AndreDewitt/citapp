@@ -49,10 +49,10 @@ body {
 
 @media (prefers-color-scheme: light) {
     :root {
-        --fondo-principal: #FFFFFF;
-        --fondo-auxiliar: #F2F2F2;
+        --fondo-principal: #EDEDED;
+        --fondo-auxiliar: #FAFAFA;
         --fondo-auxiliar-03: rgba(0, 0, 0, 0.137);
-        --color-texto: rgb(36, 36, 36);
+        --color-texto: #1D1D1D;
         
         --border: 1px solid rgba(0,0,0,0.3);
     }

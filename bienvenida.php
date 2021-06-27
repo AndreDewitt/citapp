@@ -3,7 +3,7 @@
 <head>
     <title>Bienvenida</title>
     <?php require_once 'public/libs/libs.php' ?>
-    <link rel="stylesheet" href="public/css/bienvenida.css?1.4">
+    <link rel="stylesheet" href="public/css/bienvenida.css?1.5">
 </head>
 <body>
     <div class="contenedor bienvenida">

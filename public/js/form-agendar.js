@@ -20,13 +20,9 @@ const reset_pag1 = () => {
     btn_finalizar[0].classList.add('btn-oculto')
 };
 
-document.getElementById('btn-cerrar-aux').addEventListener('click', () => {
-    location.reload();
-});
-
 document.addEventListener('click', evt => {
     const c = evt.target.getAttribute("class")
-    if (c === 'btn_agendar material-icons') {
+    if (c === 'btn_agendar material-icons' || c === 'btn btn-icon-self btn-azul btn_agendar material-icons') {
         const clase = modal_agendar[0].getAttribute("class");
         if (clase === 'modal modal-ocultar' && evt.target.dataset.nombre != '') {
             if (evt.target.matches('.btn_agendar')) {
@@ -41,6 +37,11 @@ document.addEventListener('click', evt => {
             location.reload()
         } else {
             filtrar(evt.target.dataset.id)
+        }
+    } else {
+        const id = evt.target.getAttribute("id")
+        if (id == 'btn-cerrar-aux') {
+            location.reload();
         }
     }
 });
@@ -82,8 +83,4 @@ btn_cerrar[0].addEventListener('click', () => {
     pag2[0].classList.add('pag-ocultar')
     reset_pag1()
     modal_agendar[0].classList.add('modal-ocultar');
-});
-
-btn_finalizar[0].addEventListener('click', () => { 
-    
 });

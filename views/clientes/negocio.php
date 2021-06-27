@@ -99,13 +99,13 @@
                 <div class="opciones">
                     <span class="btn btn-azul btn-anterior btn-oculto">Anterior</span>
                     <span class="btn btn-azul btn-siguiente ">Siguiente</span>
-                    <button class="btn btn-azul-hover btn-finalizar btn-oculto">Finalizar</button>
+                    <button class="btn btn-verde btn-finalizar btn-oculto">Finalizar</button>
                     <span class="btn btn-rojo btn-cerrar" id="btn-cerrar-aux">Cancelar</span>
                 </div>
             </form>
         </div>
     </div>
     <script src="public/js/fetch-api.js?1.3"></script>
-    <script src="public/js/form-agendar.js?1.1"></script>
+    <script src="public/js/form-agendar.js?1.4"></script>
 </body>
 </html>
