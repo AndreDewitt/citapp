@@ -122,9 +122,9 @@
                             </div>
                             <section class="servicios con-w8">
                                 <label for="hora_apertura">Horario de Apertura</label>
-                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_apertura" id="hora_apertura">
+                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_apertura" id="hora_apertura" required>
                                 <label for="hora_cierre">Horario de Cierre</label>
-                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_cierre" id="hora_cierre">
+                                <input class="form-control" style="background-color: var(--fondo-principal);" type="time" name="hora_cierre" id="hora_cierre" required>
                                 <div class="opciones">
                                     <button class="btn btn-azul">Ingresar</button>
                                     <label id="btn-atencion-cancelar" class="btn btn-rojo btn-cerrar">Cancelar</label>
