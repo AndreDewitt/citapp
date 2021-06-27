@@ -4,6 +4,7 @@ require_once 'models/negocio/duenio.php';
 require_once 'models/negocio/negocio.php';
 require_once 'models/negocio/contacto.php';
 require_once 'models/negocio/usuario.php';
+require_once 'models/negocio/categoria.php';
 
  class duenioController {
     public $model;
@@ -16,9 +17,11 @@ require_once 'models/negocio/usuario.php';
         $this->negocio = new Negocio();
         $this->contacto = new Contacto();
         $this->usuario = new Usuario();
+        $this->categoria = new Categoria();
     }
 
     public function login () {
+        $tablas = $this->categoria->mostrar('t_categoria');
         require_once 'views/negocio/login.php';
     }
 

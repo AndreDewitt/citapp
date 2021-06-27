@@ -3,6 +3,7 @@
 <head>
     <title>Iniciar Sesión</title>
     <?php require_once 'public/libs/libs.php' ?>
+
 </head>
 <body>
     <section class="login contenedor">
@@ -20,7 +21,7 @@
                             <label for="nombre">Nombre de usuario: </label>
                             <input class="form-control" type="text" name="nombre" id="nombre" autocomplete="off">
                             <label for="contrasenia">Contraseña: </label>
-                            <input class="form-control" type="password" name="contrasenia" id="contrasenia" >
+                            <input class="form-control" type="password" name="contrasenia" id="contrasenia">
                             <div class="opciones con-w12">
                                 <button class="btn btn-azul txt-center">Entrar</button>
                                 <a class="btn btn-azul-hover btn_registro txt-center">Registrarse</a>
@@ -42,51 +43,55 @@
                                 <h4>Información personal</h4>
                                 <div class="con-w12">
                                     <label for="nombreDuenio">Nombre(s): </label>
-                                    <input class="form-control" type="text" name="nombreDuenio" id="nombreDuenio">
+                                    <input class="form-control" type="text" name="nombreDuenio" id="nombreDuenio" required>
                                 </div>
                                 <div class="row-con con-w12 justify-beetween">
                                     <div class="row-con con-w6">
                                         <label class="con-w11" for="apellidoP">Apellido Paterno</label>
-                                        <input class="con-w11 form-control" type="text" name="apellidoP" id="apellidoP">
+                                        <input class="con-w11 form-control" type="text" name="apellidoP" id="apellidoP" required>
                                     </div>
                                     <div class="row-con con-w6 justify-right">
                                         <label class="con-w11" for="apellidoM">Apellido Materno</label>
-                                        <input class="con-w11 form-control" type="text" name="apellidoM" id="apellidoM">
+                                        <input class="con-w11 form-control" type="text" name="apellidoM" id="apellidoM" required>
                                     </div>
                                 </div>
                                 <label for="edad">Edad</label>
-                                <input class="form-control" type="number" name="edad" id="edad">
+                                <input class="form-control" type="number" name="edad" id="edad" required>
                             </div>
                             <div class="con con-w12">
                                 <h4>Información de contacto</h4>
                                 <div class="con-w12">
                                     <label class="row-con con-w12" for="correo">Correo electrónico: </label>
-                                    <input class="con-w12 form-control" type="email" name="correo" id="correo">
+                                    <input class="con-w12 form-control" type="email" name="correo" id="correo" required>
                                 </div>
                                 <div class="row-con con-w12 justify-beetween">
                                     <div class="row-con con-w6">
                                         <label class="row-con con-w11" for="tel_casa">Teléfono fijo: </label>
-                                        <input class="con-w11 form-control" type="number" name="tel_casa" id="tel_casa">
+                                        <input class="con-w11 form-control" type="number" name="tel_casa" id="tel_casa" required>
                                     </div>
                                     <div class="row-con con-w6 justify-right">
                                         <label class="row-con con-w11" for="tel_cel">Teléfono celular: </label>
-                                        <input class="con-w11 form-control" type="number" name="tel_cel" id="tel_cel"> 
+                                        <input class="con-w11 form-control" type="number" name="tel_cel" id="tel_cel" required> 
                                     </div>
                                 </div>
                             </div>
                             <div class="con con-w12">
                                 <h4>Información del negocio</h4>
+                                <?php while ($categorias = $tablas->fetch_object()):?>
                                 <label for="categoria">Categoria</label>
-                                <input class="form-control" type="number" name="categoria" id="categoria">
+                                <select class="form-control" name="categoria" id="categoria">
+                                    <option value="<?=$categorias->id?>"><?=$categorias->nombre?></option>
+                                </select>
+                                <?php endwhile;?>
                                 <label for="nombreNegocio">Nombre del Negocio</label>
-                                <input class="form-control" type="text" name="nombreNegocio" id="nombreNegocio">
+                                <input class="form-control" type="text" name="nombreNegocio" id="nombreNegocio" required>
                             </div>
                             <div class="con con-w12">
                                 <h4>Información de la cuenta</h4>
                                 <label for="nombreUsuario">Nombre de usuairo: </label>
-                                <input class="form-control" type="text" name="nombreUsuario" id="nombreUsuario">
+                                <input class="form-control" type="text" name="nombreUsuario" id="nombreUsuario" required>
                                 <label for="password">Contraseña: </label>
-                                <input class="form-control" type="password" name="password" id="password">
+                                <input class="form-control" type="password" name="password" id="password" required>
                             </div>
                             <div class="row-con con con-w11">
                                 <button class="btn  btn-azul">Continuar</button>
