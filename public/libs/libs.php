@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="public/css/modal.css?2.0">
 <link rel="stylesheet" href="public/css/header.css?1.1">
 <link rel="stylesheet" href="public/css/consumidor-filtrar.css?1.8">
-<link rel="stylesheet" href="public/css/consumidor-informacion.css?1.3">
+<link rel="stylesheet" href="public/css/consumidor-informacion.css?1.4">
 <link rel="stylesheet" href="public/css/horario.css?1.8">
 <link rel="stylesheet" href="public/css/menu.css?1.9">
 <link rel="stylesheet" href="public/css/cita.css">

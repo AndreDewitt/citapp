@@ -56,6 +56,10 @@ body .informacion .opciones .servicio {
     border-radius: var(--radius);
 }
 
+.contenedor .negocio .ubicacion .mapa iframe {
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
     body .informacion {
         width: 90%;

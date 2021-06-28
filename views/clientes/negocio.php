@@ -59,7 +59,7 @@
                     <p>Calle <?=$ubicacion->calle?>, Num. Interior <?=$ubicacion->num_int?>, Num. Exterior <?=$ubicacion->num_ext?>, Colonia <?=$ubicacion->colonia?>, Código Postal <?=$ubicacion->cp?>, Alcaldía <?=$ubicacion->alcaldia?>, Ciudad <?=$ubicacion->ciudad?>.</p>
                 </div>
                 <div class="mapa">
-                    <iframe src="" frameborder="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120521.83149045397!2d-99.07467569116776!3d19.26900101595088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce033852d4c267%3A0x9b4f40e120096e3f!2zVGzDoWh1YWMsIENETVg!5e0!3m2!1ses-419!2smx!4v1624849692375!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
