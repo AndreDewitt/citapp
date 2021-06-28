@@ -1,11 +1,13 @@
 <?php 
     require_once 'models/clientes/agendar.php';
+    require_once 'models/negocio/horario.php';
 
     class agendarController {
         public $model;
 
         public function __construct() {
             $this->model = new Agendar();
+            $this->horario = new Horario();
         }
 
         public function mostrar () {
@@ -53,13 +55,26 @@
         }
 
         public function guardarCita () {
-            $this->model->setNombre($_POST['nombre']);
-            $this->model->setCorreo($_POST['correo']);
-            $this->model->setTel($_POST['tel']);
-            $this->model->setServicio($_POST['select_servicios']);
-            $this->model->setHorario($_POST['radio_dia']);
-            $resultado = $this->model->insertar();
-            echo $resultado;
+            $servicio = $_POST['select_servicios'];
+            $hor = $this->model->buscarPor("t_horario","id_servicio",$servicio);
+            $res = $hor->fetch_object(); 
+            $dis = $res->disponibilidad;
+            echo $res->disponibilidad;
+            if ($dis > 0) {
+                $this->model->setNombre($_POST['nombre']);
+                $this->model->setCorreo($_POST['correo']);
+                $this->model->setTel($_POST['tel']);
+                $this->model->setServicio($servicio);
+                $this->model->setHorario($_POST['radio_dia']);
+                $resultado2 = $this->model->insertar();
+                if ($resultado2) {
+                    $this->horario->setId($res->id);
+                    $actualizar = $this->horario->actualizar();
+                    header("Location: http://localhost/citapp/?controllers=agendarController&action=mostrar");
+                }
+            } else {
+                header("Location: http://localhost/citapp/?controllers=agendarController&action=mostrar");
+            }
         }
     }
 

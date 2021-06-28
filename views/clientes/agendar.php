@@ -8,7 +8,9 @@
     <div class="contenedor">
         <header class="row-con titulo">
             <div class="logo">
-                <?php require_once 'public/img/Citapp - Logo.php' ?>
+                <a href="http://localhost/citapp/">
+                    <?php require_once 'public/img/Citapp - Logo.php' ?>
+                </a>
             </div>
         </header>
         <div class="row-scroll agendar">
@@ -60,7 +62,7 @@
             <div class="titulo txt-center">
                 <h4 id="h1_nombre_negocio"></h4>
             </div>
-            <form id="agendar-cita">
+            <form id="agendar-cita" action="http://localhost/citapp/?controllers=agendarController&action=guardarCita" method="POST">
                 <div class="pag-1">
                     <div class="seleccion">
                         <h5>Selecciona un servicio</h5>
@@ -80,7 +82,7 @@
                     <label for="nombre">Nombre completo</label>
                     <input class="form-control" type="text" name="nombre" id="nombre" required>
                     <label for="correo">Correo electrónico</label>
-                    <input class="form-control" type="text" name="correo" id="correo" required>
+                    <input class="form-control" type="email" name="correo" id="correo" required>
                     <label for="tel">Número telefónico</label>
                     <input class="form-control" type="text" name="tel" id="tel" required>
                     <input class="form-control" type="number" name="aux" id="aux"  hidden="">
@@ -94,7 +96,7 @@
             </form>
         </div>
     </div>
-    <script src="public/js/fetch-api.js?1.3"></script>
-    <script src="public/js/form-agendar.js?1.4"></script>
+    <script src="public/js/fetch-api.js?1.4"></script>
+    <script src="public/js/form-agendar.js?1.5"></script>
 </body>
 </html>

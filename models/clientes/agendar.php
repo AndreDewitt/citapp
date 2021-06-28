@@ -32,7 +32,12 @@
 
         public function insertar(){
             $sql="INSERT INTO t_citas(nombre,correo,tel,id_servicio,id_horario) 
-                VALUES ('$this->nombre','$this->correo','$this->tel','$this->idServicio','$this->idHorario')";
+                VALUES (
+                    '$this->nombre',
+                    '$this->correo',
+                    '$this->tel',
+                    '$this->idServicio',
+                    '$this->idHorario')";
             $query=mysqli_query($this->db,$sql);
             return $query;
         }

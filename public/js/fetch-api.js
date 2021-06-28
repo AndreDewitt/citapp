@@ -1,18 +1,3 @@
-const form = document.getElementById("agendar-cita")
-const guardarCita = () => {
-    const data = new FormData(form);
-    let opciones = {
-        method: "POST",
-        body: data
-    };
-    fetch("http://localhost/citapp/?controllers=agendarController&action=guardarCita",opciones)
-    .then((res) => {
-        location.reload();
-    })
-    .catch()
-    .finally()
-}
-
 const servicios = (id) => {
     fetch("http://localhost/citapp/?controllers=agendarController&action=obtenerServicios&id="+id)
     .then((res) => (res.ok ? res.json() : Promise.reject(res)))
@@ -114,7 +99,6 @@ const renderHorarios = (json) => {
         div3.classList.add('hora')
 
         label.innerHTML = el.dia
-        di.innerHTML = 'Lugares disponibles: ' + el.disponibilidad
         fecha_hora.innerHTML = el.d + ' - ' + el.a
 
         label.setAttribute("for","radio_dia_"+el.id)
@@ -122,6 +106,14 @@ const renderHorarios = (json) => {
         radio.setAttribute("id","radio_dia_"+el.id)
         radio.setAttribute("name","radio_dia")
         radio.setAttribute("value",el.id)
+        
+        if (el.disponibilidad > 0) {
+            di.innerHTML = 'Lugares disponibles: ' + el.disponibilidad
+        } else {
+            radio.setAttribute("disabled",'')
+            di.innerHTML = 'No hay lugares disponibles'
+            di.setAttribute("style",'color:red;')
+        }
 
         div2.appendChild(radio)
         div2.appendChild(label)

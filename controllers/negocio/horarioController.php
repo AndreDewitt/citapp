@@ -58,9 +58,13 @@
         }
 
         public function eliminar () {
-            $this->model->setId($_POST['id']);
+            $this->model->setId($_GET['id']);
             $resultado = $this->model->eliminar();
-            return $resultado;
+            if ($resultado) {
+                header("Location: http://localhost/Citapp/?controllers=horarioController&action=mostrar");
+            } else {
+                header("Location: http://localhost/Citapp/?controllers=horarioController&action=mostrar");
+            }
         }
 
         public function actualizar () {

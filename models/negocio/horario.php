@@ -51,7 +51,7 @@
         }
 
         public function actualizar(){
-            $sql = "UPDATE t_horario SET  dia = '$this->dia', d = '$this->d', a = '$this->a', disponibilidad = '$this->disponibilidad', id_servicio = '$this->servicio' WHERE id = '$this->id'";
+            $sql = "UPDATE t_horario SET disponibilidad = disponibilidad-1 WHERE id = '$this->id'";
             $respuesta = mysqli_query($this->db, $sql);
             return $respuesta;
         }

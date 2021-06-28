@@ -8,7 +8,9 @@
     <div class="contenedor">
         <header class="row-con titulo">
             <div class="logo">
-                <?php require_once 'public/img/Citapp - Logo.php' ?>
+                <a href="http://localhost/citapp/">
+                    <?php require_once 'public/img/Citapp - Logo.php' ?>
+                </a>
             </div>
         </header>
         <div class="informacion row-con align-center">

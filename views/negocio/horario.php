@@ -52,7 +52,7 @@
                                     <p>Horas disponible: <?=$horario->d?></p> - <p><?=$horario->a?></p>
                                 </div>
                                 <div class="opciones con-w3 justify-right">
-                                    <button class="btn btn-rojo">Eliminar</button>
+                                    <a href="http://localhost/Citapp/?controllers=horarioController&action=eliminar&id=<?=$horario->id?>" class="btn btn-rojo">Eliminar</a>
                                 </div>
                             </div>
                 <?php 

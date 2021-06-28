@@ -24,6 +24,7 @@
                             <div class="opciones con-w12">
                                 <button class="btn btn-azul txt-center">Entrar</button>
                                 <a class="btn btn-azul-hover btn_registro txt-center">Registrarse</a>
+                                <a href="http://localhost/citapp/" class="btn txt-center">Cancelar</a>
                             </div>
                         </form>
                     </div>
@@ -77,12 +78,12 @@
                             </div>
                             <div class="con con-w12">
                                 <h4>Información del negocio</h4>
-                                <?php while ($categorias = $tablas->fetch_object()):?>
                                 <label for="categoria">Categoria</label>
                                 <select class="form-control" name="categoria" id="categoria">
-                                    <option value="<?=$categorias->id?>"><?=$categorias->nombre?></option>
+                                    <?php while ($categorias = $tablas->fetch_object()):?>
+                                        <option value="<?=$categorias->id?>"><?=$categorias->nombre?></option>
+                                    <?php endwhile;?>
                                 </select>
-                                <?php endwhile;?>
                                 <label for="nombreNegocio">Nombre del Negocio</label>
                                 <input class="form-control" type="text" name="nombreNegocio" id="nombreNegocio" required>
                             </div>

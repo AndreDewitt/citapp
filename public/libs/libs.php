@@ -1,7 +1,6 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#FAFAFA"/>
 
 <link rel="stylesheet" href="public/css/modal.css?2.0">
 <link rel="stylesheet" href="public/css/header.css?1.1">

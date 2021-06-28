@@ -56,10 +56,6 @@ select.addEventListener('click', (evt) => {
     }
 });
 
-form_agendar.addEventListener('submit', evt => {
-    evt.preventDefault();
-    guardarCita();
-});
 
 btn_siguiente[0].addEventListener('click', () => {
     btn_anterior[0].classList.remove('btn-oculto')
